@@ -2,8 +2,7 @@ import mdx from "@astrojs/mdx";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://wangjiangyu-creator.github.io",
-  base: "/CCCL",
+  site: "https://cccl.eastlaw.wang",
   integrations: [mdx()],
   output: "static"
 });
