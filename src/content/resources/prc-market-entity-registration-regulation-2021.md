@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://english.www.gov.cn/policies/latestreleases/202108/24/content_WS6124bcd3c6d0df57f98df117.html"
 translationStatus: "instructor-summary"
 summary: "A unified registration framework for companies and other market entities, covering registered items, procedures, deregistration, and market-exit administration."
-topics: ["business-forms-and-personality", "formation-registration-and-articles", "distress-dissolution-and-liquidation"]
+topics: ["business-forms-and-personality", "formation-registration-and-articles", "capital-contributions-and-shareholder-finance", "distress-dissolution-and-liquidation"]
 tags: ["registration", "market entities", "formation", "deregistration"]
 ---
 

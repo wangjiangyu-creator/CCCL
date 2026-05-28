@@ -9,7 +9,7 @@ status: "Scholarly working paper"
 sourceUrl: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3826242"
 translationStatus: "not-needed"
 summary: "Study of China's Enterprise Bankruptcy Law after its first decade, focusing on reform history, practical enforcement limits, institutional constraints, and market-exit policy."
-topics: ["veil-piercing-groups-and-creditors", "distress-dissolution-and-liquidation"]
+topics: ["capital-contributions-and-shareholder-finance", "veil-piercing-groups-and-creditors", "distress-dissolution-and-liquidation"]
 tags: ["bankruptcy", "insolvency", "corporate distress", "China", "law reform"]
 ---
 
@@ -20,4 +20,3 @@ Use this for a broader institutional account of why insolvency law can be diffic
 ## Teaching Notes
 
 Pair it with the Enterprise Bankruptcy Law so students can compare law-on-the-books with law-in-action.
-

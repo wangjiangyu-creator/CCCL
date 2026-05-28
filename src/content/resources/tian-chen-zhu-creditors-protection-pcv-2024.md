@@ -9,7 +9,7 @@ status: "Open-access empirical article"
 sourceUrl: "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0302561"
 translationStatus: "not-needed"
 summary: "Uses difference-in-differences analysis to examine whether the 2005 veil-piercing amendment improved creditor protection through debt-paying capacity."
-topics: ["business-forms-and-personality", "veil-piercing-groups-and-creditors"]
+topics: ["business-forms-and-personality", "capital-contributions-and-shareholder-finance", "veil-piercing-groups-and-creditors"]
 tags: ["veil piercing", "creditor protection", "empirical study", "PLOS ONE", "debt capacity"]
 ---
 

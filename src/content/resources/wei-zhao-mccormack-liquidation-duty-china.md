@@ -9,7 +9,7 @@ status: "Scholarly article"
 sourceUrl: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3549387"
 translationStatus: "not-needed"
 summary: "Analysis of liquidation duties in Chinese corporate law, including creditor-regarding duties, insider moral hazard, and reform options for distressed companies."
-topics: ["directors-officers-and-controller-duties", "veil-piercing-groups-and-creditors", "distress-dissolution-and-liquidation"]
+topics: ["capital-contributions-and-shareholder-finance", "directors-officers-and-controller-duties", "veil-piercing-groups-and-creditors", "distress-dissolution-and-liquidation"]
 tags: ["liquidation duty", "creditors", "directors", "distress", "China"]
 ---
 
@@ -20,4 +20,3 @@ Use this when students ask whether duties shift as a company approaches insolven
 ## Teaching Notes
 
 It helps bridge director-duty analysis and liquidation-liability cases such as Guiding Case No. 9.
-

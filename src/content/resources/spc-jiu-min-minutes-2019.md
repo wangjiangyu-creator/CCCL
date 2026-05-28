@@ -10,7 +10,7 @@ status: "Judicial policy guidance"
 sourceUrl: "https://www.court.gov.cn/zixun/xiangqing/199691.html"
 translationStatus: "unavailable"
 summary: "The Ninth Civil and Commercial Trial Minutes include influential guidance on company external guarantees, representative authority, good-faith review, and corporate-governance defects in transactions."
-topics: ["formation-registration-and-articles", "corporate-organs-and-governance", "directors-officers-and-controller-duties", "veil-piercing-groups-and-creditors"]
+topics: ["formation-registration-and-articles", "capital-contributions-and-shareholder-finance", "corporate-organs-and-governance", "directors-officers-and-controller-duties", "veil-piercing-groups-and-creditors"]
 tags: ["Jiu Min Minutes", "company guarantee", "ultra vires", "legal representative", "good faith"]
 ---
 

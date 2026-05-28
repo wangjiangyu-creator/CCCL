@@ -150,6 +150,47 @@ test("topic pages have enriched legislation and reading coverage", async () => {
   }
 });
 
+test("Unit 3 has deep capital contribution and shareholder finance coverage", async () => {
+  const topics = await readCollection("topics");
+  const resources = await readCollection("resources");
+  const resourceLookup = new Map(resources.map((resource) => [resource.id, resource]));
+  const unit3 = topics.find((topic) => topic.id === "capital-contributions-and-shareholder-finance");
+  assert.ok(unit3, "Unit 3 topic must exist");
+
+  assert.ok(unit3.data.legislationIds.length >= 14, "Unit 3 needs deeper law, rule, and judicial guidance coverage");
+  assert.ok(unit3.data.caseIds.length >= 8, "Unit 3 needs a richer set of capital contribution cases");
+  assert.ok(unit3.data.readingIds.length >= 24, "Unit 3 needs expanded practice, scholarship, and comparative readings");
+
+  for (const id of [
+    "spc-company-law-draft-interpretation-2025",
+    "spc-company-law-article-88-non-retroactivity-reply-2024",
+    "wang-qinjie-licheng-capital-deadline-extension",
+    "yao-jincheng-hongda-contribution-period-resolution",
+    "beijing-building-materials-debt-setoff-contribution",
+    "today-seed-malicious-equity-transfer",
+    "fujian-environmental-foreign-investor-capital-contribution",
+    "china-briefing-shareholder-capital-contribution-obligations-2025",
+    "jiang-acceleration-capital-contribution-2019",
+    "zhang-contribution-performance-debt-law-2023",
+    "enriques-macey-european-legal-capital-2001",
+    "armour-legal-capital-outdated-2006",
+    "eu-company-law-directive-2017"
+  ]) {
+    assert.ok(resourceLookup.has(id), `Unit 3 expected new resource ${id}`);
+  }
+
+  const linkedIds = [
+    ...unit3.data.legislationIds,
+    ...unit3.data.caseIds,
+    ...unit3.data.readingIds
+  ];
+  const linkedResources = linkedIds.map((id) => resourceLookup.get(id)).filter(Boolean);
+  const kinds = new Set(linkedResources.map((resource) => resource.data.kind));
+  for (const kind of ["law", "regulation", "judicial-interpretation", "rule", "case", "practice-note", "literature", "comparative"]) {
+    assert.ok(kinds.has(kind), `Unit 3 needs ${kind} material`);
+  }
+});
+
 test("libraries include a deeper legislation set and literature set", async () => {
   const resources = await readCollection("resources");
   const primaryKinds = new Set(["law", "regulation", "judicial-interpretation", "rule", "comparative"]);

@@ -10,7 +10,7 @@ status: "Chinese-language scholarly article"
 sourceUrl: "https://www.pkulaw.com/journal/articlebyauthor?author=%E7%8E%8B%E4%BA%9A&way=subHead"
 translationStatus: "instructor-summary"
 summary: "Restates shareholder limited liability from historical and comparative perspectives, arguing that shareholders owe contribution duties to the company rather than direct external debt liability."
-topics: ["business-forms-and-personality"]
+topics: ["business-forms-and-personality", "capital-contributions-and-shareholder-finance", "veil-piercing-groups-and-creditors"]
 tags: ["Chinese scholarship", "limited liability", "shareholders", "creditors", "comparative law"]
 ---
 
