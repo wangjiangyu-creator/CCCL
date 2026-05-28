@@ -3,6 +3,7 @@ import ResourceCard from "@components/ResourceCard.astro";
 import TopicPrepChecklist from "@components/TopicPrepChecklist.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { contentSlug, resourcesByIds } from "@lib/collections";
+import { withBase } from "@lib/paths";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -64,7 +65,7 @@ const topicExercises = topic.data.exerciseIds
         <ul>
           {
             topicExercises.map((exercise) => (
-              <li><a href={`/exercise/${contentSlug(exercise)}/`}>{exercise.data.title}</a></li>
+              <li><a href={withBase(`/exercise/${contentSlug(exercise)}/`)}>{exercise.data.title}</a></li>
             ))
           }
         </ul>

@@ -2,6 +2,7 @@
 import ResourceFilter from "@components/ResourceFilter.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { byTopicOrder, contentSlug } from "@lib/collections";
+import { withBase } from "@lib/paths";
 import { getCollection } from "astro:content";
 
 const topics = (await getCollection("topics")).sort(byTopicOrder);
@@ -48,9 +49,9 @@ const orderedExercises = topics.flatMap((topic) =>
                   <span class="badge">{exercise.data.difficulty}</span>
                   {topic && <span class="badge">Unit {topic.data.order}</span>}
                 </div>
-                <h2><a href={`/exercise/${contentSlug(exercise)}/`}>{exercise.data.title}</a></h2>
+                <h2><a href={withBase(`/exercise/${contentSlug(exercise)}/`)}>{exercise.data.title}</a></h2>
                 {topic && <p>{topic.data.title}</p>}
-                <a class="text-link" href={`/exercise/${contentSlug(exercise)}/`}>Open exercise</a>
+                <a class="text-link" href={withBase(`/exercise/${contentSlug(exercise)}/`)}>Open exercise</a>
               </article>
             );
           })

@@ -1,6 +1,7 @@
 ---
 import type { Exercise, Resource, Topic } from "@lib/collections";
 import { contentSlug } from "@lib/collections";
+import { withBase } from "@lib/paths";
 
 interface Props {
   topic: Topic;
@@ -29,13 +30,13 @@ type PrepStep = {
 const resourceLinks = (records: Resource[]): PrepRecord[] =>
   records.map((record) => ({
     title: record.data.title,
-    href: `/resources/${contentSlug(record)}/`
+    href: withBase(`/resources/${contentSlug(record)}/`)
   }));
 
 const exerciseLinks = (records: Exercise[]): PrepRecord[] =>
   records.map((record) => ({
     title: record.data.title,
-    href: `/exercise/${contentSlug(record)}/`
+    href: withBase(`/exercise/${contentSlug(record)}/`)
   }));
 
 const steps: PrepStep[] = [

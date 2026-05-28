@@ -1,6 +1,7 @@
 ---
 import type { Resource } from "@lib/collections";
 import { contentSlug, translationLabel, translationLinkLabel } from "@lib/collections";
+import { withBase } from "@lib/paths";
 
 interface Props {
   resource: Resource;
@@ -34,7 +35,7 @@ const search = [
     <span class="badge">{resource.data.jurisdiction}</span>
     <span class="badge">{translationLabel(resource.data.translationStatus)}</span>
   </div>
-  <h3><a href={`/resources/${slug}/`}>{resource.data.title}</a></h3>
+  <h3><a href={withBase(`/resources/${slug}/`)}>{resource.data.title}</a></h3>
   {resource.data.originalTitle && <p class="original-title">{resource.data.originalTitle}</p>}
   <p>{resource.data.summary}</p>
   <dl class="record-meta">
@@ -61,7 +62,7 @@ const search = [
     <a href={resource.data.sourceUrl} target="_blank" rel="noreferrer">Source</a>
     {
       resource.data.translationUrl && (
-        <a href={resource.data.translationUrl} target="_blank" rel="noreferrer">
+        <a href={withBase(resource.data.translationUrl)} target="_blank" rel="noreferrer">
           {translationLinkLabel(resource.data.translationStatus)}
         </a>
       )

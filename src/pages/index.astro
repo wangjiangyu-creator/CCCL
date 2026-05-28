@@ -2,6 +2,7 @@
 import ResourceCard from "@components/ResourceCard.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { byTopicOrder, contentSlug, resourcesByIds } from "@lib/collections";
+import { withBase } from "@lib/paths";
 import { getCollection } from "astro:content";
 
 const topics = (await getCollection("topics")).sort(byTopicOrder);
@@ -52,12 +53,12 @@ const prepSteps = [
           preparation.
         </p>
         <div class="hero-actions">
-          <a class="primary-link" href="/topics/">Start with topics</a>
-          <a class="secondary-link" href="/laws-and-regulations/">Browse sources</a>
+          <a class="primary-link" href={withBase("/topics/")}>Start with topics</a>
+          <a class="secondary-link" href={withBase("/laws-and-regulations/")}>Browse sources</a>
         </div>
       </div>
       <figure class="hero-media">
-        <img src="/images/course-hero.png" alt="Open law materials with comparative governance notes" />
+        <img src={withBase("/images/course-hero.png")} alt="Open law materials with comparative governance notes" />
       </figure>
     </div>
   </section>
@@ -89,8 +90,8 @@ const prepSteps = [
           cases second, comparative context third, and practice last.
         </p>
         <div class="hero-actions">
-          <a class="primary-link" href="/topics/">Open topics</a>
-          <a class="secondary-link" href="/exercise/">Open exercises</a>
+          <a class="primary-link" href={withBase("/topics/")}>Open topics</a>
+          <a class="secondary-link" href={withBase("/exercise/")}>Open exercises</a>
         </div>
       </div>
       <ol class="prep-entry__list">
@@ -136,12 +137,12 @@ const prepSteps = [
           <p class="eyebrow">Course map</p>
           <h2>Ten teaching units</h2>
         </div>
-        <a href="/topics/">View all</a>
+        <a href={withBase("/topics/")}>View all</a>
       </div>
       <div class="course-map course-map--wide">
         {
           topics.map((topic) => (
-            <a href={`/topics/${contentSlug(topic)}/`}>
+            <a href={withBase(`/topics/${contentSlug(topic)}/`)}>
               <strong>{topic.data.order}. {topic.data.title}</strong>
               <span>{topic.data.summary}</span>
             </a>
@@ -158,7 +159,7 @@ const prepSteps = [
           <p class="eyebrow">Starter sources</p>
           <h2>Core materials</h2>
         </div>
-        <a href="/literature/">Compare readings</a>
+        <a href={withBase("/literature/")}>Compare readings</a>
       </div>
       <div class="record-grid">
         {featuredResources.map((resource) => <ResourceCard resource={resource} />)}

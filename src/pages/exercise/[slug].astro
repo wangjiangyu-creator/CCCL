@@ -2,6 +2,7 @@
 import ResourceCard from "@components/ResourceCard.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { contentSlug, resourcesByIds } from "@lib/collections";
+import { withBase } from "@lib/paths";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -28,7 +29,7 @@ const linkedResources = resourcesByIds(resources, exercise.data.linkedResources)
         {topic && <span class="badge">Unit {topic.data.order}</span>}
       </div>
       <h1 class="page-title">{exercise.data.title}</h1>
-      {topic && <p class="lede"><a href={`/topics/${contentSlug(topic)}/`}>{topic.data.title}</a></p>}
+      {topic && <p class="lede"><a href={withBase(`/topics/${contentSlug(topic)}/`)}>{topic.data.title}</a></p>}
     </div>
   </section>
 

@@ -2,6 +2,8 @@
 
 LW6134 Chinese and Comparative Company Law course companion built with Astro.
 
+Public site: https://wangjiangyu-creator.github.io/CCCL/
+
 ## Commands
 
 ```bash
