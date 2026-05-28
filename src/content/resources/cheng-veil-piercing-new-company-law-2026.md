@@ -2,7 +2,7 @@
 kind: "literature"
 jurisdiction: "Mainland China"
 title: "Why Veil Piercing Differs: Reassessing Judicial Trends under China's New Company Law"
-citation: "Pangyue Cheng, Chinese Journal of Comparative Law, 2026"
+citation: "Pangyue Cheng, Chinese Journal of Comparative Law, 2025, 13, cxag003"
 authority: "Pangyue Cheng"
 date: "2026-04-11"
 status: "Open-access scholarly article"
@@ -20,4 +20,3 @@ Use this for current discussion of corporate groups, sibling-company liability, 
 ## Teaching Notes
 
 This is a timely reading for the 2023 revision because it focuses on the new horizontal veil-piercing rule rather than only classic shareholder-company abuse.
-
