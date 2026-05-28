@@ -2,7 +2,7 @@
 title: "Formation File Review"
 topicSlug: "formation-registration-and-articles"
 difficulty: "introductory"
-linkedResources: ["prc-company-law-2023", "prc-market-entity-registration-regulation-2021", "prc-foreign-investment-law-2019", "guiding-case-96-song-wenjun-shareholder-status"]
+linkedResources: ["prc-company-law-2023", "prc-market-entity-registration-regulation-2021", "prc-foreign-investment-law-2019", "civil-code-article-505-business-scope", "wanjiayu-hongrui-articles-amendment", "zhang-wen-qixia-identity-registration", "carson-niuxinda-foreign-shareholder-status", "guiding-case-96-song-wenjun-shareholder-status", "formal-review-company-registration-duty"]
 ---
 
 ## Facts

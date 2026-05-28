@@ -3,8 +3,8 @@ title: "Capital Contributions and Shareholder Finance"
 order: 3
 summary: "Study registered capital, subscribed contributions, payment deadlines, defective contribution liability, reductions, and creditor-facing finance rules."
 legislationIds: ["prc-company-law-2023", "prc-registered-capital-registration-system-2024", "prc-company-law-time-effect-2024", "prc-company-law-interpretation-iii-2020", "prc-enterprise-bankruptcy-law-2006", "prc-enterprise-state-owned-assets-transaction-measures-2016", "prc-civil-code-2020"]
-caseIds: ["guiding-case-9-shanghai-cunliang-liquidation"]
-readingIds: ["npc-company-law-revision-explanation-2023", "shen-registered-capital-rules-2014", "liu-business-registration-subscribed-capital-2025", "tsinghua-capital-system-company-law-2024", "china-briefing-company-law-amendment-2024", "garrigues-company-law-revision-2024"]
+caseIds: ["guiding-case-9-shanghai-cunliang-liquidation", "tianjin-zombie-shareholder-expulsion", "haidian-capital-contribution-typical-cases"]
+readingIds: ["npc-company-law-revision-explanation-2023", "shen-registered-capital-rules-2014", "liu-business-registration-subscribed-capital-2025", "li-cai-partly-paid-shares-2025", "tanglau-capital-contribution-commitments-2024", "iba-registered-capital-system-2025", "corporate-capital-formation-system-china", "china-briefing-shareholder-agreements-articles-2025", "tsinghua-capital-system-company-law-2024", "china-briefing-company-law-amendment-2024", "garrigues-company-law-revision-2024"]
 exerciseIds: ["capital-contribution-timeline"]
 ---
 

@@ -10,7 +10,7 @@ status: "Scholarly article"
 sourceUrl: "https://www.aisixiang.com/data/156645.html"
 translationStatus: "instructor-summary"
 summary: "Argues that statutory-limit violations should be evaluated through reliance, public-law legality, and responsibility rules rather than by expanding the legal representative into a general company boss."
-topics: ["business-forms-and-personality", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
+topics: ["business-forms-and-personality", "formation-registration-and-articles", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
 tags: ["statutory limits", "legal representative", "contract validity", "reliance protection", "liability"]
 ---
 

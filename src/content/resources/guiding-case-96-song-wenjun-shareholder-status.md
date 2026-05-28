@@ -18,6 +18,10 @@ tags: ["guiding case", "shareholder status", "share transfer", "SOE restructurin
 
 Use this for close-company transfer limits, employment-linked ownership, and the role of articles in shaping shareholder rights.
 
+## Brief English Introduction
+
+Guiding Case No. 96 confirms that initial articles may validly restrict transfer and provide for reasonable repurchase arrangements in a restructured limited liability company, so long as the clauses do not violate mandatory Company Law norms.
+
 ## Teaching Notes
 
 It is a strong prompt for asking when company autonomy supports stability and when it risks suppressing exit rights.

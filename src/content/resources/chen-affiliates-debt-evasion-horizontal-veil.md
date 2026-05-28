@@ -10,7 +10,7 @@ status: "Typical case"
 sourceUrl: "https://www.court.gov.cn/zixun/xiangqing/485211.html"
 translationStatus: "instructor-summary"
 summary: "A Supreme People's Court typical case in which an actual controller used affiliated companies to shift transaction benefits and evade debts, leading the court to pierce horizontally."
-topics: ["business-forms-and-personality", "veil-piercing-groups-and-creditors"]
+topics: ["business-forms-and-personality", "formation-registration-and-articles", "veil-piercing-groups-and-creditors"]
 tags: ["typical case", "horizontal veil piercing", "debt evasion", "actual controller", "creditors"]
 ---
 

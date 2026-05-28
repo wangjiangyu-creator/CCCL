@@ -3,7 +3,7 @@ title: "State-Owned and Foreign-Invested Companies"
 order: 9
 summary: "Study special governance problems in state-invested companies and foreign-invested enterprises under the revised Company Law and investment regime."
 legislationIds: ["prc-company-law-2023", "prc-enterprise-state-owned-assets-law-2008", "prc-state-owned-assets-supervision-regulation-2003", "prc-enterprise-state-owned-assets-transaction-measures-2016", "prc-enterprise-democratic-management-provisions-2012", "prc-foreign-investment-law-2019", "prc-foreign-investment-law-implementation-regulation-2019", "prc-foreign-investment-information-reporting-measures-2019", "prc-foreign-investment-negative-list-2024", "prc-foreign-investment-security-review-measures-2020", "csrc-overseas-listing-trial-measures-2023"]
-caseIds: ["guiding-case-96-song-wenjun-shareholder-status"]
+caseIds: ["guiding-case-96-song-wenjun-shareholder-status", "carson-niuxinda-foreign-shareholder-status"]
 readingIds: ["hines-dual-loyalties-state-invested-companies", "oecd-listed-companies-china-2011", "oecd-soe-guidelines-2024", "oecd-corporate-governance-factbook-china-2025", "kwm-new-company-law-corporate-governance-2023", "milhaupt-zheng-beyond-ownership-2015", "ndrc-negative-list-qa-2024", "mofcom-foreign-investment-information-reporting-qa-2020", "taylorwessing-employee-participation-2024"]
 exerciseIds: ["soe-foreign-investment-brief"]
 ---
