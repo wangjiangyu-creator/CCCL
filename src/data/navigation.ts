@@ -4,5 +4,6 @@ export const navigation = [
   { label: "Cases", href: "/cases/" },
   { label: "Comparative Law", href: "/comparative-law/" },
   { label: "Literature", href: "/literature/" },
+  { label: "Materials", href: "/materials/" },
   { label: "Exercise", href: "/exercise/" }
 ];

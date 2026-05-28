@@ -1,0 +1,104 @@
+---
+import ResourceFilter from "@components/ResourceFilter.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { materialGroups, materialStats } from "@data/materials";
+
+const searchText = (record: (typeof materialGroups)[number]["records"][number], groupTitle: string) =>
+  [
+    groupTitle,
+    record.company,
+    record.chineseName,
+    record.market,
+    record.ownership,
+    record.year,
+    record.document,
+    record.language,
+    record.note
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+---
+
+<BaseLayout title="Materials" description="Source-linked company materials for Chinese and comparative company-law study.">
+  <section class="hero">
+    <div class="shell">
+      <p class="eyebrow">Company documents</p>
+      <h1 class="page-title">Source-linked company materials</h1>
+      <p class="lede">
+        Public source links for Articles of Association, IPO prospectuses, CSR
+        reports, ESG reports, and annual financial reports from major Chinese
+        companies listed in Hong Kong, New York, Nasdaq, London, and related
+        overseas markets.
+      </p>
+      <div class="stats-grid stats-grid--compact">
+        <div class="stat">
+          <strong>{materialStats.groups}</strong>
+          <span>Document groups</span>
+        </div>
+        <div class="stat">
+          <strong>{materialStats.records}</strong>
+          <span>Source records</span>
+        </div>
+        <div class="stat">
+          <strong>{materialStats.companies}</strong>
+          <span>Issuer names</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" data-filter-scope>
+    <div class="shell">
+      <ResourceFilter label="Filter company materials" kinds={materialGroups.map((group) => group.title)} />
+
+      {materialGroups.map((group) => (
+        <section class="material-group" aria-labelledby={`${group.key}-heading`}>
+          <div class="section-head material-group__head">
+            <div>
+              <p class="eyebrow">10 records</p>
+              <h2 id={`${group.key}-heading`}>{group.title}</h2>
+              <p>{group.description}</p>
+            </div>
+          </div>
+
+          <div class="record-grid">
+            {group.records.map((record) => (
+              <article
+                class="resource-card material-card"
+                data-filter-card
+                data-kind={group.title}
+                data-search={searchText(record, group.title)}
+              >
+                <div class="badge-row">
+                  <span class="badge">{group.title}</span>
+                  <span class="badge">{record.ownership}</span>
+                </div>
+                <h3>{record.company}</h3>
+                {record.chineseName && <p class="original-title">{record.chineseName}</p>}
+                <p>{record.note}</p>
+                <dl class="record-meta record-meta--stacked">
+                  <dt>Document</dt>
+                  <dd>{record.document}</dd>
+                  <dt>Market</dt>
+                  <dd>{record.market}</dd>
+                  <dt>Year</dt>
+                  <dd>{record.year}</dd>
+                  <dt>Language</dt>
+                  <dd>{record.language}</dd>
+                </dl>
+                <div class="card-actions">
+                  {record.links.map((link) => (
+                    <a href={link.href} target="_blank" rel="noreferrer">
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

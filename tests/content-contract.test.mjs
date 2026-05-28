@@ -221,7 +221,7 @@ test("exercise linked resources resolve to resource records", async () => {
   }
 });
 
-test("site navigation exposes the planned six top-level sections", async () => {
+test("site navigation exposes the planned seven top-level sections", async () => {
   const navFile = await readFile(new URL("src/data/navigation.ts", root), "utf8");
   for (const label of [
     "Topics",
@@ -229,10 +229,48 @@ test("site navigation exposes the planned six top-level sections", async () => {
     "Cases",
     "Comparative Law",
     "Literature",
+    "Materials",
     "Exercise"
   ]) {
     assert.ok(navFile.includes(`label: "${label}"`), `navigation missing ${label}`);
   }
+});
+
+test("materials page exposes five curated source-linked document groups", async () => {
+  const materialsData = await readFile(new URL("src/data/materials.ts", root), "utf8");
+  const materialsPage = await readFile(new URL("src/pages/materials/index.astro", root), "utf8");
+
+  for (const phrase of [
+    "articlesOfAssociation",
+    "ipoProspectuses",
+    "csrReports",
+    "esgReports",
+    "annualFinancialReports"
+  ]) {
+    assert.ok(materialsData.includes(phrase), `materials data missing ${phrase}`);
+  }
+
+  for (const phrase of ["materialGroups", "group.records", "record.links", "record.market"]) {
+    assert.ok(materialsPage.includes(phrase), `materials page missing renderer phrase ${phrase}`);
+  }
+
+  const entryCount = (key, nextKey) => {
+    const start = materialsData.indexOf(`${key}: [`);
+    assert.notEqual(start, -1, `materials data missing ${key} array`);
+    const end = nextKey ? materialsData.indexOf(`\n  ${nextKey}: [`, start) : materialsData.indexOf("\n};", start);
+    assert.notEqual(end, -1, `materials data missing end for ${key} array`);
+    return [...materialsData.slice(start, end).matchAll(/\n\s+\{\n\s+company:/g)].length;
+  };
+
+  assert.equal(entryCount("articlesOfAssociation", "ipoProspectuses"), 10, "expected ten articles of association records");
+  assert.equal(entryCount("ipoProspectuses", "csrReports"), 10, "expected ten IPO prospectus records");
+  assert.equal(entryCount("csrReports", "esgReports"), 10, "expected ten CSR report records");
+  assert.equal(entryCount("esgReports", "annualFinancialReports"), 10, "expected ten ESG report records");
+  assert.equal(entryCount("annualFinancialReports"), 10, "expected ten annual financial report records");
+
+  assert.ok(materialsPage.includes("Source-linked company materials"), "materials page needs a clear hero");
+  assert.ok(materialsPage.includes("data-filter-card"), "materials page should support client-side filtering");
+  assert.ok(materialsPage.includes("10 records"), "materials page should show ten-record group counts");
 });
 
 test("home page exposes syllabus overview and learning outcomes", async () => {
