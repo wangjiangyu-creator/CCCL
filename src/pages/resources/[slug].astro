@@ -1,0 +1,58 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { contentSlug, translationLabel, translationLinkLabel } from "@lib/collections";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const resources = await getCollection("resources");
+  return resources.map((resource) => ({
+    params: { slug: contentSlug(resource) },
+    props: { resource }
+  }));
+}
+
+const { resource } = Astro.props;
+const { Content } = await resource.render();
+---
+
+<BaseLayout title={resource.data.title} description={resource.data.summary}>
+  <section class="hero">
+    <div class="shell">
+      <div class="badge-row">
+        <span class="badge">{resource.data.kind.replaceAll("-", " ")}</span>
+        <span class="badge">{resource.data.jurisdiction}</span>
+        <span class="badge">{translationLabel(resource.data.translationStatus)}</span>
+      </div>
+      <h1 class="page-title">{resource.data.title}</h1>
+      {resource.data.originalTitle && <p class="original-title">{resource.data.originalTitle}</p>}
+      <p class="lede">{resource.data.summary}</p>
+      <div class="hero-actions">
+        <a class="primary-link" href={resource.data.sourceUrl} target="_blank" rel="noreferrer">Open source</a>
+        {
+          resource.data.translationUrl && (
+            <a class="secondary-link" href={resource.data.translationUrl} target="_blank" rel="noreferrer">
+              Open {translationLinkLabel(resource.data.translationStatus)}
+            </a>
+          )
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell topic-layout">
+      <article class="prose">
+        <Content />
+      </article>
+      <aside class="side-panel">
+        <h2>Record details</h2>
+        <dl class="record-meta record-meta--stacked">
+          {resource.data.authority && <><dt>Authority</dt><dd>{resource.data.authority}</dd></>}
+          {resource.data.citation && <><dt>Citation</dt><dd>{resource.data.citation}</dd></>}
+          {resource.data.date && <><dt>Date</dt><dd>{resource.data.date}</dd></>}
+          {resource.data.status && <><dt>Status</dt><dd>{resource.data.status}</dd></>}
+        </dl>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

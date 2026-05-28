@@ -1,0 +1,168 @@
+---
+import ResourceCard from "@components/ResourceCard.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { byTopicOrder, contentSlug, resourcesByIds } from "@lib/collections";
+import { getCollection } from "astro:content";
+
+const topics = (await getCollection("topics")).sort(byTopicOrder);
+const resources = await getCollection("resources");
+const exercises = await getCollection("exercises");
+const featuredResources = resourcesByIds(resources, [
+  "prc-company-law-2023",
+  "prc-securities-law-2019",
+  "guiding-case-15-xugong-veil-piercing"
+]);
+
+const learningOutcomes = [
+  "Understand the revised PRC Company Law as a source of company formation, capital, governance, duty, and exit rules.",
+  "Compare Chinese company law with Hong Kong, Delaware, UK, Singapore, and transnational corporate-governance materials.",
+  "Read Chinese original authorities with clear citation discipline and explicit translation-status awareness.",
+  "Apply statutes, judicial interpretations, cases, and policy materials to seminar hypotheticals without relying on model answers."
+];
+
+const prepSteps = [
+  {
+    title: "Read core law",
+    text: "Start each unit with the statutes, rules, and judicial interpretations linked from the topic page."
+  },
+  {
+    title: "Review cases",
+    text: "Move from source text to case facts, holdings, and remedial consequences."
+  },
+  {
+    title: "Compare readings",
+    text: "Use scholarship and comparative materials to test where Chinese company law converges or diverges."
+  },
+  {
+    title: "Attempt the public exercise",
+    text: "Apply the materials to the seminar problem before class without relying on model answers."
+  }
+];
+---
+
+<BaseLayout title="Course Companion">
+  <section class="hero hero--with-media">
+    <div class="shell hero-grid">
+      <div>
+        <p class="eyebrow">LW6134 course companion</p>
+        <h1 class="page-title">Chinese and Comparative Company Law</h1>
+        <p class="lede">
+          A student-first map of the revised PRC Company Law, source-linked Chinese
+          materials, comparative common-law references, and guided exercises for seminar
+          preparation.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-link" href="/topics/">Start with topics</a>
+          <a class="secondary-link" href="/laws-and-regulations/">Browse sources</a>
+        </div>
+      </div>
+      <figure class="hero-media">
+        <img src="/images/course-hero.png" alt="Open law materials with comparative governance notes" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell stats-grid">
+      <div class="stat">
+        <strong>{topics.length}</strong>
+        <span>teaching units</span>
+      </div>
+      <div class="stat">
+        <strong>{resources.length}</strong>
+        <span>source records</span>
+      </div>
+      <div class="stat">
+        <strong>{exercises.length}</strong>
+        <span>public exercises</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell prep-entry">
+      <div class="prep-entry__copy">
+        <p class="eyebrow">How to prepare</p>
+        <h2>Use each topic page as a seminar checklist</h2>
+        <p>
+          The site now gives each unit a public preparation path: sources first,
+          cases second, comparative context third, and practice last.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-link" href="/topics/">Open topics</a>
+          <a class="secondary-link" href="/exercise/">Open exercises</a>
+        </div>
+      </div>
+      <ol class="prep-entry__list">
+        {
+          prepSteps.map((step) => (
+            <li>
+              <strong>{step.title}</strong>
+              <span>{step.text}</span>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell overview-grid">
+      <article class="overview-panel">
+        <p class="eyebrow">Syllabus-derived overview</p>
+        <h2>What this site is for</h2>
+        <p>
+          CCCL organizes LW6134 around the revised PRC Company Law and the
+          comparative materials students need for close reading, seminar preparation,
+          and problem analysis. It keeps Chinese originals visible, labels translation
+          status clearly, and separates public learning prompts from any private
+          answer bank.
+        </p>
+      </article>
+      <article class="overview-panel">
+        <p class="eyebrow">Learning outcomes</p>
+        <h2>By the end of the course</h2>
+        <ul class="outcome-list">
+          {learningOutcomes.map((outcome) => <li>{outcome}</li>)}
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Course map</p>
+          <h2>Ten teaching units</h2>
+        </div>
+        <a href="/topics/">View all</a>
+      </div>
+      <div class="course-map course-map--wide">
+        {
+          topics.map((topic) => (
+            <a href={`/topics/${contentSlug(topic)}/`}>
+              <strong>{topic.data.order}. {topic.data.title}</strong>
+              <span>{topic.data.summary}</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Starter sources</p>
+          <h2>Core materials</h2>
+        </div>
+        <a href="/literature/">Compare readings</a>
+      </div>
+      <div class="record-grid">
+        {featuredResources.map((resource) => <ResourceCard resource={resource} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

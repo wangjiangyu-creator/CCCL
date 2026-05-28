@@ -1,0 +1,43 @@
+---
+import ResourceFilter from "@components/ResourceFilter.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { byTopicOrder, contentSlug } from "@lib/collections";
+import { getCollection } from "astro:content";
+
+const topics = (await getCollection("topics")).sort(byTopicOrder);
+---
+
+<BaseLayout title="Topics" description="LW6134 teaching units for Chinese and Comparative Company Law.">
+  <section class="hero">
+    <div class="shell">
+      <p class="eyebrow">Course map</p>
+      <h1 class="page-title">Topics</h1>
+      <p class="lede">
+        Ten linked units from business forms and corporate personality through
+        listed-company regulation, state-invested companies, and liquidation.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell" data-filter-scope>
+      <ResourceFilter label="Filter topics" />
+      <div class="grid">
+        {
+          topics.map((topic) => (
+            <article
+              class="topic-card"
+              data-filter-card
+              data-search={`${topic.data.title} ${topic.data.summary} Unit ${topic.data.order}`.toLowerCase()}
+            >
+              <span class="badge">Unit {topic.data.order}</span>
+              <h2><a href={`/topics/${contentSlug(topic)}/`}>{topic.data.title}</a></h2>
+              <p>{topic.data.summary}</p>
+              <a class="text-link" href={`/topics/${contentSlug(topic)}/`}>Open unit</a>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

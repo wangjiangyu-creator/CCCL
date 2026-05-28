@@ -1,0 +1,47 @@
+---
+interface Props {
+  label: string;
+  kinds?: string[];
+  jurisdictions?: string[];
+  topicOptions?: { label: string; value: string }[];
+}
+
+const { label, kinds = [], jurisdictions = [], topicOptions = [] } = Astro.props;
+---
+
+<section class="filter-panel" data-filter-root aria-label={label}>
+  <div class="filter-grid">
+    <label>
+      Search
+      <input data-filter-search type="search" placeholder="Company Law, 股东知情权, Caremark" />
+    </label>
+    {kinds.length > 0 && (
+      <label>
+        Type
+        <select data-filter-select="kind">
+          <option value="all">All</option>
+          {kinds.map((kind) => <option value={kind}>{kind.replaceAll("-", " ")}</option>)}
+        </select>
+      </label>
+    )}
+    {jurisdictions.length > 0 && (
+      <label>
+        Jurisdiction
+        <select data-filter-select="jurisdiction">
+          <option value="all">All</option>
+          {jurisdictions.map((jurisdiction) => <option value={jurisdiction}>{jurisdiction}</option>)}
+        </select>
+      </label>
+    )}
+    {topicOptions.length > 0 && (
+      <label>
+        Topic
+        <select data-filter-select="topic">
+          <option value="all">All</option>
+          {topicOptions.map((topic) => <option value={topic.value}>{topic.label}</option>)}
+        </select>
+      </label>
+    )}
+  </div>
+  <p class="filter-count" data-filter-count></p>
+</section>

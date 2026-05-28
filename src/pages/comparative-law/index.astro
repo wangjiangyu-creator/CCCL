@@ -1,0 +1,38 @@
+---
+import ResourceCard from "@components/ResourceCard.astro";
+import ResourceFilter from "@components/ResourceFilter.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { byResourceTitle, byTopicOrder, contentSlug } from "@lib/collections";
+import { getCollection } from "astro:content";
+
+const allResources = await getCollection("resources");
+const topics = (await getCollection("topics")).sort(byTopicOrder);
+const resources = allResources
+  .filter((resource) => resource.data.kind === "comparative" || resource.data.jurisdiction !== "Mainland China")
+  .sort(byResourceTitle);
+const kinds = [...new Set(resources.map((resource) => resource.data.kind))].sort();
+const jurisdictions = [...new Set(resources.map((resource) => resource.data.jurisdiction))].sort();
+const topicOptions = topics.map((topic) => ({ label: topic.data.title, value: contentSlug(topic) }));
+---
+
+<BaseLayout title="Comparative Law" description="Comparative company-law materials for LW6134.">
+  <section class="hero">
+    <div class="shell">
+      <p class="eyebrow">Comparative method</p>
+      <h1 class="page-title">Comparative Law</h1>
+      <p class="lede">
+        Common-law statutes, cases, and governance benchmarks for comparing Chinese
+        company-law solutions with Hong Kong, Delaware, UK, Singapore, and transnational materials.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <ResourceFilter label="Filter comparative materials" kinds={kinds} jurisdictions={jurisdictions} topicOptions={topicOptions} />
+      <div class="record-grid">
+        {resources.map((resource) => <ResourceCard resource={resource} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

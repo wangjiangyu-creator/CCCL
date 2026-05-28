@@ -1,0 +1,61 @@
+---
+import ResourceFilter from "@components/ResourceFilter.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { byTopicOrder, contentSlug } from "@lib/collections";
+import { getCollection } from "astro:content";
+
+const topics = (await getCollection("topics")).sort(byTopicOrder);
+const exercises = await getCollection("exercises");
+const topicLookup = new Map(topics.map((topic) => [contentSlug(topic), topic]));
+const orderedExercises = topics.flatMap((topic) =>
+  exercises.filter((exercise) => exercise.data.topicSlug === contentSlug(topic))
+);
+---
+
+<BaseLayout title="Exercise" description="Guided public exercises for LW6134 seminar preparation.">
+  <section class="hero">
+    <div class="shell">
+      <p class="eyebrow">Seminar practice</p>
+      <h1 class="page-title">Exercise</h1>
+      <p class="lede">
+        Public exercises give facts, questions, hints, and discussion guidance without
+        publishing model answers.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell" data-filter-scope>
+      <ResourceFilter label="Filter exercises" />
+      <div class="grid">
+        {
+          orderedExercises.map((exercise) => {
+            const topic = topicLookup.get(exercise.data.topicSlug);
+            const search = [
+              exercise.data.title,
+              exercise.data.difficulty,
+              topic?.data.title,
+              topic?.data.summary,
+              ...exercise.data.linkedResources
+            ]
+              .filter(Boolean)
+              .join(" ")
+              .toLowerCase();
+
+            return (
+              <article class="exercise-card" data-filter-card data-search={search}>
+                <div class="badge-row">
+                  <span class="badge">{exercise.data.difficulty}</span>
+                  {topic && <span class="badge">Unit {topic.data.order}</span>}
+                </div>
+                <h2><a href={`/exercise/${contentSlug(exercise)}/`}>{exercise.data.title}</a></h2>
+                {topic && <p>{topic.data.title}</p>}
+                <a class="text-link" href={`/exercise/${contentSlug(exercise)}/`}>Open exercise</a>
+              </article>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

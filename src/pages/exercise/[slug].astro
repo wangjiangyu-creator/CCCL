@@ -1,0 +1,54 @@
+---
+import ResourceCard from "@components/ResourceCard.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { contentSlug, resourcesByIds } from "@lib/collections";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const exercises = await getCollection("exercises");
+  return exercises.map((exercise) => ({
+    params: { slug: contentSlug(exercise) },
+    props: { exercise }
+  }));
+}
+
+const { exercise } = Astro.props;
+const { Content } = await exercise.render();
+const topics = await getCollection("topics");
+const topic = topics.find((item) => contentSlug(item) === exercise.data.topicSlug);
+const resources = await getCollection("resources");
+const linkedResources = resourcesByIds(resources, exercise.data.linkedResources);
+---
+
+<BaseLayout title={exercise.data.title} description={`Guided LW6134 exercise: ${exercise.data.title}.`}>
+  <section class="hero">
+    <div class="shell">
+      <div class="badge-row">
+        <span class="badge">{exercise.data.difficulty}</span>
+        {topic && <span class="badge">Unit {topic.data.order}</span>}
+      </div>
+      <h1 class="page-title">{exercise.data.title}</h1>
+      {topic && <p class="lede"><a href={`/topics/${contentSlug(topic)}/`}>{topic.data.title}</a></p>}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell prose">
+      <Content />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Exercise sources</p>
+          <h2>Linked resources</h2>
+        </div>
+      </div>
+      <div class="record-grid">
+        {linkedResources.map((resource) => <ResourceCard resource={resource} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

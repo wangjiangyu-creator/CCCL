@@ -1,0 +1,55 @@
+---
+import ResourceCard from "@components/ResourceCard.astro";
+import ResourceFilter from "@components/ResourceFilter.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { byTopicOrder, contentSlug, resourcesByKind } from "@lib/collections";
+import { getCollection } from "astro:content";
+
+const allResources = await getCollection("resources");
+const topics = (await getCollection("topics")).sort(byTopicOrder);
+const resources = resourcesByKind(allResources, ["law", "regulation", "judicial-interpretation", "rule"]);
+const kinds = [...new Set(resources.map((resource) => resource.data.kind))].sort();
+const jurisdictions = [...new Set(resources.map((resource) => resource.data.jurisdiction))].sort();
+const topicOptions = topics.map((topic) => ({ label: topic.data.title, value: contentSlug(topic) }));
+const mainlandCount = resources.filter((resource) => resource.data.jurisdiction === "Mainland China").length;
+const comparativeCount = resources.filter((resource) => resource.data.kind === "comparative").length;
+const regulatoryCount = resources.filter((resource) =>
+  ["regulation", "judicial-interpretation", "rule"].includes(resource.data.kind)
+).length;
+---
+
+<BaseLayout title="Laws and Regulations" description="Source-linked statutes, regulations, rules, and judicial interpretations for LW6134.">
+  <section class="hero">
+    <div class="shell">
+      <p class="eyebrow">Primary law</p>
+      <h1 class="page-title">Laws and Regulations</h1>
+      <p class="lede">
+        Official and source-linked legislation, regulations, judicial interpretations,
+        regulatory rules, and comparative statutes for Chinese company-law study.
+      </p>
+      <div class="stats-grid stats-grid--compact">
+        <div class="stat">
+          <strong>{mainlandCount}</strong>
+          <span>Mainland instruments</span>
+        </div>
+        <div class="stat">
+          <strong>{regulatoryCount}</strong>
+          <span>Rules and interpretations</span>
+        </div>
+        <div class="stat">
+          <strong>{comparativeCount}</strong>
+          <span>Comparative statutes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <ResourceFilter label="Filter laws and regulations" kinds={kinds} jurisdictions={jurisdictions} topicOptions={topicOptions} />
+      <div class="record-grid">
+        {resources.map((resource) => <ResourceCard resource={resource} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

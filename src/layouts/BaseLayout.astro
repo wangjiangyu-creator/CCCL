@@ -1,0 +1,76 @@
+---
+import SiteHeader from "@components/SiteHeader.astro";
+import "@styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Student-first course companion for LW6134 Chinese and Comparative Company Law."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title} | LW6134</title>
+  </head>
+  <body>
+    <SiteHeader />
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="shell">
+        <p>
+          LW6134 Chinese and Comparative Company Law. Public course companion with
+          source-linked Chinese legal materials and comparative references.
+        </p>
+      </div>
+    </footer>
+    <script is:inline>
+      const normalize = (value) => (value || "").toLowerCase();
+
+      document.querySelectorAll("[data-filter-root]").forEach((root) => {
+        const search = root.querySelector("[data-filter-search]");
+        const selects = [...root.querySelectorAll("[data-filter-select]")];
+        const count = root.querySelector("[data-filter-count]");
+        const scope = root.closest("[data-filter-scope]") || document;
+        const cards = [...scope.querySelectorAll("[data-resource-card], [data-filter-card]")];
+
+        const apply = () => {
+          const query = normalize(search?.value);
+          let visible = 0;
+
+          cards.forEach((card) => {
+            const matchesSearch = !query || normalize(card.dataset.search).includes(query);
+            const matchesSelects = selects.every((select) => {
+              const key = select.dataset.filterSelect;
+              const value = select.value;
+              if (value === "all") return true;
+              if (key === "topic") {
+                return (card.dataset.topics || "").split("|").includes(value);
+              }
+              return card.dataset[key] === value;
+            });
+            const show = matchesSearch && matchesSelects;
+            card.hidden = !show;
+            if (show) visible += 1;
+          });
+
+          if (count) count.textContent = `${visible} records`;
+        };
+
+        search?.addEventListener("input", apply);
+        selects.forEach((select) => select.addEventListener("change", apply));
+        apply();
+      });
+    </script>
+  </body>
+</html>

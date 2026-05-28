@@ -1,0 +1,70 @@
+---
+import type { Resource } from "@lib/collections";
+import { contentSlug, translationLabel, translationLinkLabel } from "@lib/collections";
+
+interface Props {
+  resource: Resource;
+}
+
+const { resource } = Astro.props;
+const slug = contentSlug(resource);
+const search = [
+  resource.data.title,
+  resource.data.originalTitle,
+  resource.data.citation,
+  resource.data.authority,
+  resource.data.summary,
+  ...resource.data.tags
+]
+  .filter(Boolean)
+  .join(" ")
+  .toLowerCase();
+---
+
+<article
+  class="resource-card"
+  data-resource-card
+  data-kind={resource.data.kind}
+  data-jurisdiction={resource.data.jurisdiction}
+  data-topics={resource.data.topics.join("|")}
+  data-search={search}
+>
+  <div class="badge-row">
+    <span class="badge">{resource.data.kind.replaceAll("-", " ")}</span>
+    <span class="badge">{resource.data.jurisdiction}</span>
+    <span class="badge">{translationLabel(resource.data.translationStatus)}</span>
+  </div>
+  <h3><a href={`/resources/${slug}/`}>{resource.data.title}</a></h3>
+  {resource.data.originalTitle && <p class="original-title">{resource.data.originalTitle}</p>}
+  <p>{resource.data.summary}</p>
+  <dl class="record-meta">
+    {resource.data.authority && (
+      <>
+        <dt>Authority</dt>
+        <dd>{resource.data.authority}</dd>
+      </>
+    )}
+    {resource.data.citation && (
+      <>
+        <dt>Citation</dt>
+        <dd>{resource.data.citation}</dd>
+      </>
+    )}
+    {resource.data.date && (
+      <>
+        <dt>Date</dt>
+        <dd>{resource.data.date}</dd>
+      </>
+    )}
+  </dl>
+  <div class="card-actions">
+    <a href={resource.data.sourceUrl} target="_blank" rel="noreferrer">Source</a>
+    {
+      resource.data.translationUrl && (
+        <a href={resource.data.translationUrl} target="_blank" rel="noreferrer">
+          {translationLinkLabel(resource.data.translationStatus)}
+        </a>
+      )
+    }
+  </div>
+</article>

@@ -1,0 +1,92 @@
+---
+import ResourceCard from "@components/ResourceCard.astro";
+import TopicPrepChecklist from "@components/TopicPrepChecklist.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { contentSlug, resourcesByIds } from "@lib/collections";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const topics = await getCollection("topics");
+  return topics.map((topic) => ({
+    params: { slug: contentSlug(topic) },
+    props: { topic }
+  }));
+}
+
+const { topic } = Astro.props;
+const { Content } = await topic.render();
+const resources = await getCollection("resources");
+const exercises = await getCollection("exercises");
+const exerciseLookup = new Map(exercises.map((exercise) => [contentSlug(exercise), exercise]));
+
+const legislationRecords = resourcesByIds(resources, topic.data.legislationIds);
+const caseRecords = resourcesByIds(resources, topic.data.caseIds);
+const readingRecords = resourcesByIds(resources, topic.data.readingIds);
+
+const groups = [
+  { title: "Legislation", records: legislationRecords },
+  { title: "Cases", records: caseRecords },
+  { title: "Readings", records: readingRecords }
+];
+const topicExercises = topic.data.exerciseIds
+  .map((id) => exerciseLookup.get(id))
+  .filter((exercise): exercise is (typeof exercises)[number] => Boolean(exercise));
+---
+
+<BaseLayout title={topic.data.title} description={topic.data.summary}>
+  <section class="hero">
+    <div class="shell">
+      <p class="eyebrow">Unit {topic.data.order}</p>
+      <h1 class="page-title">{topic.data.title}</h1>
+      <p class="lede">{topic.data.summary}</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="shell">
+      <TopicPrepChecklist
+        topic={topic}
+        legislation={legislationRecords}
+        cases={caseRecords}
+        readings={readingRecords}
+        exercises={topicExercises}
+      />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell topic-layout">
+      <article class="prose">
+        <Content />
+      </article>
+      <aside class="side-panel">
+        <h2>Exercises</h2>
+        <ul>
+          {
+            topicExercises.map((exercise) => (
+              <li><a href={`/exercise/${contentSlug(exercise)}/`}>{exercise.data.title}</a></li>
+            ))
+          }
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  {
+    groups.map((group) => (
+      <section class="section">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Unit materials</p>
+              <h2>{group.title}</h2>
+            </div>
+          </div>
+          <div class="record-grid">
+            {group.records.map((resource) => <ResourceCard resource={resource} />)}
+          </div>
+        </div>
+      </section>
+    ))
+  }
+</BaseLayout>

@@ -1,0 +1,158 @@
+---
+import type { Exercise, Resource, Topic } from "@lib/collections";
+import { contentSlug } from "@lib/collections";
+
+interface Props {
+  topic: Topic;
+  legislation: Resource[];
+  cases: Resource[];
+  readings: Resource[];
+  exercises: Exercise[];
+}
+
+const { topic, legislation, cases, readings, exercises } = Astro.props;
+
+type PrepRecord = {
+  title: string;
+  href: string;
+};
+
+type PrepStep = {
+  number: string;
+  category: string;
+  title: string;
+  summary: string;
+  records: PrepRecord[];
+  empty: string;
+};
+
+const resourceLinks = (records: Resource[]): PrepRecord[] =>
+  records.map((record) => ({
+    title: record.data.title,
+    href: `/resources/${contentSlug(record)}/`
+  }));
+
+const exerciseLinks = (records: Exercise[]): PrepRecord[] =>
+  records.map((record) => ({
+    title: record.data.title,
+    href: `/exercise/${contentSlug(record)}/`
+  }));
+
+const steps: PrepStep[] = [
+  {
+    number: "1",
+    category: "Core law",
+    title: "Read core legislation and rules",
+    summary: "Start with the statutory, regulatory, and judicial materials that frame this unit.",
+    records: resourceLinks(legislation),
+    empty: "No linked records yet. Use the full materials below for source reading."
+  },
+  {
+    number: "2",
+    category: "Cases",
+    title: "Review linked cases",
+    summary: "Identify the facts, holding, and remedial move before turning to commentary.",
+    records: resourceLinks(cases),
+    empty: "No linked records yet. Revisit the case library after the source list is expanded."
+  },
+  {
+    number: "3",
+    category: "Readings",
+    title: "Compare readings",
+    summary: "Use scholarship, practice notes, and comparative materials to test the Chinese-law position.",
+    records: resourceLinks(readings),
+    empty: "No linked records yet. Focus on the legislation and cases for this unit."
+  },
+  {
+    number: "4",
+    category: "Exercise",
+    title: "Attempt the public exercise",
+    summary: "Apply the sources to a problem before looking at seminar discussion prompts.",
+    records: exerciseLinks(exercises),
+    empty: "No linked records yet. Exercise material will appear when the unit exercise is connected."
+  }
+];
+
+const reflectionPrompts = [
+  `Which rule or case controls the hardest issue in Unit ${topic.data.order}?`,
+  "Where would a Hong Kong, Delaware, UK, Singapore, or transnational comparator change the analysis?",
+  "What extra facts would you need before advising a director, shareholder, creditor, or regulator?"
+];
+
+const totalMaterials = legislation.length + cases.length + readings.length + exercises.length;
+---
+
+<section class="prep-checklist" aria-labelledby="prep-heading">
+  <div class="prep-checklist__head">
+    <div>
+      <p class="eyebrow">Before seminar</p>
+      <h2 id="prep-heading">Prepare Unit {topic.data.order}: {topic.data.title}</h2>
+      <p>
+        Work through these public materials before class. The sequence keeps source
+        reading before problem analysis and does not include model answers.
+      </p>
+    </div>
+    <div class="prep-total" aria-label={`${totalMaterials} linked preparation materials`}>
+      <strong>{totalMaterials}</strong>
+      <span>linked materials</span>
+    </div>
+  </div>
+
+  <dl class="prep-summary" aria-label="Linked preparation material counts">
+    <div>
+      <dt>Core law</dt>
+      <dd>{legislation.length}</dd>
+    </div>
+    <div>
+      <dt>Cases</dt>
+      <dd>{cases.length}</dd>
+    </div>
+    <div>
+      <dt>Readings</dt>
+      <dd>{readings.length}</dd>
+    </div>
+    <div>
+      <dt>Exercise</dt>
+      <dd>{exercises.length}</dd>
+    </div>
+  </dl>
+
+  <ol class="prep-steps">
+    {
+      steps.map((step) => (
+        <li class="prep-step">
+          <span class="prep-step__marker" aria-hidden="true">{step.number}</span>
+          <div class="prep-step__body">
+            <div class="prep-step__heading">
+              <span class="badge">{step.category}</span>
+              <h3>{step.title}</h3>
+            </div>
+            <p>{step.summary}</p>
+            {
+              step.records.length > 0 ? (
+                <>
+                  <ul class="prep-links">
+                    {
+                      step.records.map((record) => (
+                        <li><a href={record.href}>{record.title}</a></li>
+                      ))
+                    }
+                  </ul>
+                </>
+              ) : (
+                <p class="prep-empty">{step.empty}</p>
+              )
+            }
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+
+  <div class="prep-reflection">
+    <h3>Reflection prompts</h3>
+    <ul>
+      {reflectionPrompts.map((prompt) => <li>{prompt}</li>)}
+    </ul>
+  </div>
+</section>
