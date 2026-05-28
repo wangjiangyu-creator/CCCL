@@ -4,7 +4,7 @@ order: 6
 summary: "Study voting, information rights, profit distribution, transfer restrictions, resolution challenges, derivative suits, and dissolution as minority remedies."
 legislationIds: ["prc-company-law-2023", "prc-company-law-interpretation-iv-2017", "prc-company-law-interpretation-v-2020", "prc-company-law-interpretation-ii-2020", "prc-company-law-interpretation-iii-2020", "prc-securities-law-2019", "csrc-listed-company-governance-code-2025", "csrc-listed-company-articles-guidelines-2025", "csrc-independent-director-measures-2023", "uk-companies-act-2006", "hk-companies-ordinance-cap-622"]
 caseIds: ["guiding-case-8-lin-fangqing-dissolution", "guiding-case-96-song-wenjun-shareholder-status", "foss-v-harbottle-proper-plaintiff"]
-readingIds: ["spc-company-law-interpretation-iv-press-2017", "huang-shareholder-inspection-rights-2023", "oecd-g20-principles-2023", "oecd-corporate-governance-factbook-2025", "howson-fiduciary-duties-china-2008", "wang-enforcing-fiduciary-duties-china", "garrigues-company-law-revision-2024"]
+readingIds: ["spc-company-law-interpretation-iv-press-2017", "huang-shareholder-inspection-rights-2023", "oecd-g20-principles-2023", "oecd-corporate-governance-factbook-2025", "qu-shareholders-meeting-reserve-power-china", "qu-representative-power-shareholders-meeting-china", "howson-fiduciary-duties-china-2008", "wang-enforcing-fiduciary-duties-china", "garrigues-company-law-revision-2024"]
 exerciseIds: ["minority-rights-dossier"]
 ---
 

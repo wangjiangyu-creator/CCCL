@@ -3,8 +3,8 @@ title: "Distress, Dissolution, and Liquidation"
 order: 10
 summary: "Finish with exit: dissolution, deregistration, liquidation obligations, creditor notice, deadlock remedies, and the consequences of failed record preservation."
 legislationIds: ["prc-company-law-2023", "prc-company-law-time-effect-2024", "prc-company-law-interpretation-ii-2020", "prc-market-entity-registration-regulation-2021", "prc-market-entity-registration-implementation-rules-2022", "prc-enterprise-bankruptcy-law-2006", "spc-bankruptcy-work-conference-minutes-2018", "prc-sole-proprietorship-enterprise-law-1999", "singapore-companies-act-1967"]
-caseIds: ["guiding-case-8-lin-fangqing-dissolution", "guiding-case-9-shanghai-cunliang-liquidation"]
-readingIds: ["npc-company-law-revision-explanation-2023", "garrigues-company-law-revision-2024", "npc-enterprise-bankruptcy-law-implementation-report-2021", "court-bankruptcy-work-conference-press-2018", "mrockova-corporate-insolvency-china-2021", "steele-godwin-chinese-insolvency-law-2017", "wei-zhao-mccormack-liquidation-duty-china"]
+caseIds: ["guiding-case-8-lin-fangqing-dissolution", "guiding-case-9-shanghai-cunliang-liquidation", "wang-xue-professional-closure-liquidation", "longyan-puppet-legal-rep-debt-evasion", "hunan-99-year-old-legal-rep-execution-evasion"]
+readingIds: ["npc-company-law-revision-explanation-2023", "garrigues-company-law-revision-2024", "npc-enterprise-bankruptcy-law-implementation-report-2021", "court-bankruptcy-work-conference-press-2018", "mrockova-corporate-insolvency-china-2021", "steele-godwin-chinese-insolvency-law-2017", "wei-zhao-mccormack-liquidation-duty-china", "xu-removal-registration-procedure-coordination-2025", "legal-rep-removal-new-company-law-lawasia-2025"]
 exerciseIds: ["dissolution-liquidation-plan"]
 ---
 

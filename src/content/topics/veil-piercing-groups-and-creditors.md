@@ -3,8 +3,8 @@ title: "Veil Piercing, Groups, and Creditors"
 order: 7
 summary: "Examine when separate personality yields to creditor protection, especially in affiliated-company groups and undercapitalized or confused operations."
 legislationIds: ["prc-company-law-2023", "prc-civil-code-2020", "prc-company-law-interpretation-ii-2020", "prc-company-law-interpretation-iii-2020", "prc-enterprise-bankruptcy-law-2006", "spc-bankruptcy-work-conference-minutes-2018", "prc-registered-capital-registration-system-2024"]
-caseIds: ["guiding-case-15-xugong-veil-piercing", "guiding-case-9-shanghai-cunliang-liquidation", "salomon-corporate-personality"]
-readingIds: ["npc-company-law-revision-explanation-2023", "tan-wang-hofmann-veil-piercing-comparative", "chan-corporate-veil-piercing-china", "cheng-veil-piercing-new-company-law-2026", "shen-registered-capital-rules-2014", "mrockova-corporate-insolvency-china-2021", "wei-zhao-mccormack-liquidation-duty-china"]
+caseIds: ["guiding-case-15-xugong-veil-piercing", "guiding-case-9-shanghai-cunliang-liquidation", "zhengzhou-henan-affiliate-horizontal-veil", "wang-xue-professional-closure-liquidation", "longyan-puppet-legal-rep-debt-evasion", "hunan-99-year-old-legal-rep-execution-evasion", "quzhou-nominee-legal-rep-wage-arrears", "salomon-corporate-personality"]
+readingIds: ["npc-company-law-revision-explanation-2023", "tan-wang-hofmann-veil-piercing-comparative", "chan-corporate-veil-piercing-china", "cheng-veil-piercing-new-company-law-2026", "shen-registered-capital-rules-2014", "mrockova-corporate-insolvency-china-2021", "wei-zhao-mccormack-liquidation-duty-china", "nrf-draft-judicial-interpretation-company-law-2026", "leetsai-article-191-direct-liability-2024", "spp-guiding-cases-56-unauthorized-guarantee-2026", "legalone-pharma-unauthorized-guarantee-2024", "ccpit-cat-and-mouse-veil-piercing-2018"]
 exerciseIds: ["veil-piercing-creditor-file"]
 ---
 
