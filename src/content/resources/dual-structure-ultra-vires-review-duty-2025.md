@@ -10,7 +10,7 @@ status: "Scholarly article"
 sourceUrl: "https://www.cnki.net/"
 translationStatus: "instructor-summary"
 summary: "Explains Article 20's distinction between statutory and agreed limits on representative power and the intermediate reasonable-review duty imposed on counterparties."
-topics: ["business-forms-and-personality", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
+topics: ["business-forms-and-personality", "formation-registration-and-articles", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
 tags: ["ultra vires representation", "reasonable review", "statutory limits", "agreed limits", "Contract Book Interpretation"]
 ---
 

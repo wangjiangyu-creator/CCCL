@@ -10,7 +10,7 @@ status: "Reference reading"
 sourceUrl: "https://www.cnki.net/"
 translationStatus: "instructor-summary"
 summary: "Explains why ultra vires acts by a registered legal representative differ from unauthorized acts by ordinary personnel under China's single legal representative model."
-topics: ["business-forms-and-personality", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
+topics: ["business-forms-and-personality", "formation-registration-and-articles", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
 tags: ["legal representative", "ultra vires", "authority", "staff acts", "company governance"]
 ---
 

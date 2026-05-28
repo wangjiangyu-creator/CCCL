@@ -10,7 +10,7 @@ status: "Guiding case"
 sourceUrl: "https://www.court.gov.cn/shenpan/xiangqing/13307.html"
 translationStatus: "unavailable"
 summary: "A company-resolution case emphasizing the limits of judicial review where the dispute concerns business judgment rather than procedural or charter illegality."
-topics: ["corporate-organs-and-governance", "directors-officers-and-controller-duties"]
+topics: ["formation-registration-and-articles", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
 tags: ["guiding case", "company resolutions", "business judgment", "corporate autonomy"]
 ---
 
@@ -21,4 +21,3 @@ Use this to distinguish invalid, voidable, and commercially unwise decisions.
 ## Teaching Notes
 
 The case gives students a concrete way to discuss corporate autonomy in Chinese adjudication.
-

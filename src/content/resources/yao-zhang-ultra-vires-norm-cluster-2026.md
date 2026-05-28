@@ -10,7 +10,7 @@ status: "Scholarly commentary"
 sourceUrl: "https://www.civillaw.com.cn/"
 translationStatus: "instructor-summary"
 summary: "Develops an interpretive account of the group of rules governing ultra vires acts by the single legal representative."
-topics: ["business-forms-and-personality", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
+topics: ["business-forms-and-personality", "formation-registration-and-articles", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
 tags: ["ultra vires representation", "legal representative", "representative theory", "company personality", "interpretation"]
 ---
 
