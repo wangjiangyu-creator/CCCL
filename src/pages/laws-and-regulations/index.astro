@@ -2,12 +2,13 @@
 import ResourceCard from "@components/ResourceCard.astro";
 import ResourceFilter from "@components/ResourceFilter.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
-import { byTopicOrder, contentSlug, resourcesByKind } from "@lib/collections";
+import { byTopicOrder, contentSlug } from "@lib/collections";
 import { getCollection } from "astro:content";
 
 const allResources = await getCollection("resources");
 const topics = (await getCollection("topics")).sort(byTopicOrder);
-const resources = resourcesByKind(allResources, ["law", "regulation", "judicial-interpretation", "rule"]);
+const primaryKinds = ["law", "regulation", "judicial-interpretation", "rule", "comparative"];
+const resources = allResources.filter((resource) => primaryKinds.includes(resource.data.kind));
 const kinds = [...new Set(resources.map((resource) => resource.data.kind))].sort();
 const jurisdictions = [...new Set(resources.map((resource) => resource.data.jurisdiction))].sort();
 const topicOptions = topics.map((topic) => ({ label: topic.data.title, value: contentSlug(topic) }));
@@ -16,6 +17,167 @@ const comparativeCount = resources.filter((resource) => resource.data.kind === "
 const regulatoryCount = resources.filter((resource) =>
   ["regulation", "judicial-interpretation", "rule"].includes(resource.data.kind)
 ).length;
+
+type Resource = (typeof resources)[number];
+type SourceTierId =
+  | "basic-law"
+  | "law"
+  | "administrative-regulation"
+  | "judicial-interpretation"
+  | "department-rule"
+  | "local-regulation"
+  | "comparative";
+
+const sourceTiers: { id: SourceTierId; title: string; description: string }[] = [
+  {
+    id: "basic-law",
+    title: "Basic Laws / 基本法律",
+    description: "NPC basic laws that provide the private-law frame for company law."
+  },
+  {
+    id: "law",
+    title: "Laws / 法律",
+    description: "National statutes for companies, securities, enterprise forms, bankruptcy, foreign investment, and state-owned assets."
+  },
+  {
+    id: "administrative-regulation",
+    title: "State Council Administrative Regulations / 国务院行政法规",
+    description: "State Council regulations and connected State Council instruments on registration, capital, names, foreign investment, and SOE governance."
+  },
+  {
+    id: "judicial-interpretation",
+    title: "Judicial Interpretations and SPC Documents / 司法解释及最高人民法院司法文件",
+    description: "Supreme People's Court interpretations, replies, minutes, and judicial policy materials."
+  },
+  {
+    id: "department-rule",
+    title: "Ministerial and CSRC Rules / 部委规章（包括证监会规章）",
+    description: "Rules, measures, guidelines, and regulatory documents issued by ministries, commissions, SAMR, CSRC, SASAC, MOFCOM, NDRC, and exchanges."
+  },
+  {
+    id: "local-regulation",
+    title: "Local Regulations / 地方法规",
+    description: "Local company-registration, business-environment, and special-zone materials."
+  },
+  {
+    id: "comparative",
+    title: "Comparative Law / 比较法",
+    description: "Company-law statutes, governance codes, securities rules, and restructuring sources from comparator jurisdictions."
+  }
+];
+
+const hasAnySignal = (resource: Resource, signals: string[]) => {
+  const text = [
+    resource.data.title,
+    resource.data.originalTitle,
+    resource.data.authority,
+    resource.data.jurisdiction,
+    ...resource.data.tags
+  ]
+    .filter(Boolean)
+    .join(" ");
+  return signals.some((signal) => text.includes(signal));
+};
+
+const sourceTierFor = (resource: Resource): SourceTierId => {
+  if (resource.data.kind === "comparative" || resource.data.jurisdiction !== "Mainland China") {
+    return "comparative";
+  }
+
+  if (
+    hasAnySignal(resource, [
+      "China Securities Regulatory Commission",
+      "State Administration for Market Regulation",
+      "National Development and Reform Commission",
+      "Ministry of Finance",
+      "Ministry of Commerce",
+      "People's Bank of China",
+      "State-Owned Assets Supervision and Administration Commission",
+      "State Taxation Administration",
+      "State Administration of Foreign Exchange",
+      "National Equities Exchange and Quotations",
+      "National Association of Financial Market Institutional Investors",
+      "SASAC",
+      "Beijing Stock Exchange",
+      "Shanghai Stock Exchange",
+      "Shenzhen Stock Exchange",
+      "证券监督管理委员会",
+      "市场监督管理总局",
+      "国家发展和改革委员会",
+      "财政部",
+      "商务部",
+      "中国人民银行",
+      "国有资产监督管理委员会",
+      "国务院国资委",
+      "国资委",
+      "国家税务总局",
+      "国家外汇管理局",
+      "全国中小企业股份转让系统",
+      "全国股转",
+      "银行间市场交易商协会",
+      "产权交易",
+      "北京证券交易所",
+      "上海证券交易所",
+      "深圳证券交易所"
+    ])
+  ) {
+    return "department-rule";
+  }
+
+  if (
+    hasAnySignal(resource, [
+      "Beijing",
+      "Shanghai",
+      "Shenzhen",
+      "Guangdong",
+      "Jiangsu",
+      "北京市",
+      "上海市",
+      "深圳",
+      "广东省",
+      "江苏省"
+    ]) &&
+    !hasAnySignal(resource, ["Supreme People's Court", "最高人民法院"])
+  ) {
+    return "local-regulation";
+  }
+
+  if (hasAnySignal(resource, ["Supreme People's Court", "SPC", "最高人民法院"])) {
+    return "judicial-interpretation";
+  }
+
+  if (resource.data.kind === "judicial-interpretation") {
+    return "judicial-interpretation";
+  }
+
+  if (hasAnySignal(resource, ["Civil Code", "民法典"])) {
+    return "basic-law";
+  }
+
+  if (resource.data.kind === "law") {
+    return "law";
+  }
+
+  if (resource.data.kind === "regulation" || hasAnySignal(resource, ["State Council", "国务院"])) {
+    return "administrative-regulation";
+  }
+
+  return "department-rule";
+};
+
+const byDateThenTitle = (a: Resource, b: Resource) => {
+  const dateA = Date.parse(a.data.date ?? "0000-01-01");
+  const dateB = Date.parse(b.data.date ?? "0000-01-01");
+  if (dateA !== dateB) return dateB - dateA;
+  return a.data.title.localeCompare(b.data.title);
+};
+
+const tieredResources = sourceTiers
+  .map((tier) => ({
+    ...tier,
+    resources: resources.filter((resource) => sourceTierFor(resource) === tier.id).sort(byDateThenTitle)
+  }))
+  .filter((tier) => tier.resources.length > 0);
 ---
 
 <BaseLayout title="Laws and Regulations" description="Source-linked statutes, regulations, rules, and judicial interpretations for LW6134.">
@@ -45,10 +207,26 @@ const regulatoryCount = resources.filter((resource) =>
   </section>
 
   <section class="section">
-    <div class="shell">
+    <div class="shell" data-filter-scope>
       <ResourceFilter label="Filter laws and regulations" kinds={kinds} jurisdictions={jurisdictions} topicOptions={topicOptions} />
-      <div class="record-grid">
-        {resources.map((resource) => <ResourceCard resource={resource} />)}
+      <div class="tier-stack">
+        {
+          tieredResources.map((tier) => (
+            <section class="resource-tier">
+              <div class="section-head resource-tier__head">
+                <div>
+                  <span class="eyebrow">Legal source</span>
+                  <h2>{tier.title}</h2>
+                  <p>{tier.description}</p>
+                </div>
+                <span class="badge">{tier.resources.length} records</span>
+              </div>
+              <div class="record-grid">
+                {tier.resources.map((resource) => <ResourceCard resource={resource} />)}
+              </div>
+            </section>
+          ))
+        }
       </div>
     </div>
   </section>

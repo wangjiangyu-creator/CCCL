@@ -405,6 +405,32 @@ select {
   gap: 16px;
 }
 
+.tier-stack {
+  display: grid;
+  gap: 30px;
+}
+
+.resource-tier {
+  scroll-margin-top: 24px;
+}
+
+.resource-tier:not(:has([data-resource-card]:not([hidden]))) {
+  display: none;
+}
+
+.resource-tier__head {
+  align-items: flex-start;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+}
+
+.resource-tier__head p {
+  max-width: 760px;
+  margin: 6px 0 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
 .original-title {
   color: var(--red) !important;
   font-weight: 700;
