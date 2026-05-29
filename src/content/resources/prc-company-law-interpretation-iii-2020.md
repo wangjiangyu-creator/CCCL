@@ -10,8 +10,8 @@ status: "Current, subject to compatibility with the 2023 Company Law"
 sourceUrl: "https://www.investor.org.cn/zczx/flfg/xzfg/202506/t20250620_808046.shtml"
 translationStatus: "unavailable"
 summary: "Judicial rules on company formation, capital contributions, defective contributions, withdrawal of capital, nominee shareholding, equity transfers involving unpaid contributions, and related creditor remedies."
-topics: ["formation-registration-and-articles", "capital-contributions-and-shareholder-finance", "veil-piercing-groups-and-creditors", "shareholder-rights-and-minority-protection"]
-tags: ["capital contributions", "formation", "defective contribution", "nominee shareholder", "SPC"]
+topics: ["formation-registration-and-articles", "capital-contributions-and-shareholder-finance", "directors-officers-and-controller-duties", "veil-piercing-groups-and-creditors", "shareholder-rights-and-minority-protection"]
+tags: ["capital contributions", "formation", "defective contribution", "nominee shareholder", "director liability", "SPC"]
 ---
 
 ## Use It For
@@ -21,4 +21,3 @@ Use this for promoter liability, contribution defects, capital withdrawal, nomin
 ## Teaching Notes
 
 After the 2023 revision, students should read this interpretation carefully through the temporal-effect rules and the revised statute.
-

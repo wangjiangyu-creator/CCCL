@@ -10,7 +10,7 @@ status: "CSRC investor protection typical case"
 sourceUrl: "https://www.csrc.gov.cn/jiangsu/c106440/c7633766/content.shtml"
 translationStatus: "instructor-summary"
 summary: "A 2026 typical case using a shareholder derivative action to force disgorgement of a controlling shareholder's short-swing trading profits to the listed company."
-topics: ["listed-companies-securities-and-disclosure", "shareholder-rights-and-minority-protection", "corporate-organs-and-governance"]
+topics: ["listed-companies-securities-and-disclosure", "shareholder-rights-and-minority-protection", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
 tags: ["investor protection typical case", "short-swing trading", "disgorgement", "shareholder derivative action", "controlling shareholder", "CSRC"]
 ---
 

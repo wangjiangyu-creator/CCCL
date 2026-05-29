@@ -9,8 +9,8 @@ status: "Open-access scholarly article"
 sourceUrl: "https://academic.oup.com/cjcl/article/doi/10.1093/cjcl/cxag003/8651440"
 translationStatus: "not-needed"
 summary: "Open-access article reassessing Chinese veil piercing after the revised Company Law's recognition of horizontal veil piercing among companies under common control."
-topics: ["business-forms-and-personality", "veil-piercing-groups-and-creditors", "shareholder-rights-and-minority-protection"]
-tags: ["horizontal veil piercing", "corporate groups", "New Company Law", "creditor protection"]
+topics: ["business-forms-and-personality", "veil-piercing-groups-and-creditors", "shareholder-rights-and-minority-protection", "directors-officers-and-controller-duties"]
+tags: ["horizontal veil piercing", "corporate groups", "New Company Law", "creditor protection", "controllers"]
 ---
 
 ## Use It For

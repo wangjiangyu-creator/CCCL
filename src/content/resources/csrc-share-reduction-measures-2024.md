@@ -10,8 +10,8 @@ status: "Current"
 sourceUrl: "https://www.csrc.gov.cn/csrc/c100028/c7483136/content.shtml"
 translationStatus: "unavailable"
 summary: "CSRC measures governing listed-company shareholder share reductions, disclosure, lock-up discipline, and market-order protection."
-topics: ["shareholder-rights-and-minority-protection", "listed-companies-securities-and-disclosure"]
-tags: ["CSRC", "share reduction", "listed companies", "shareholder trading"]
+topics: ["directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection", "listed-companies-securities-and-disclosure"]
+tags: ["CSRC", "share reduction", "listed companies", "controlling shareholders", "shareholder trading"]
 ---
 
 ## Use It For

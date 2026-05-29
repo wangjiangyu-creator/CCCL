@@ -9,9 +9,9 @@ date: "2025-04-25"
 status: "Current"
 sourceUrl: "https://www.neeq.com.cn/class_b/200025639.html"
 translationStatus: "unavailable"
-summary: "NEEQ rules for public transfer and quotation of company shares, including listing conditions, application, review, simultaneous issuance, information disclosure, and self-regulatory measures."
-topics: ["listed-companies-securities-and-disclosure", "capital-contributions-and-shareholder-finance", "business-forms-and-personality"]
-tags: ["NEEQ", "stock quotation", "public transfer", "SMEs"]
+summary: "NEEQ rules for public transfer and quotation of company shares, including listing conditions, application, review, simultaneous issuance, information disclosure, governance, and self-regulatory measures."
+topics: ["listed-companies-securities-and-disclosure", "capital-contributions-and-shareholder-finance", "business-forms-and-personality", "directors-officers-and-controller-duties"]
+tags: ["NEEQ", "stock quotation", "public transfer", "SMEs", "disclosure", "governance"]
 ---
 
 ## Use It For

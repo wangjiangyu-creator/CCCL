@@ -284,6 +284,47 @@ test("Unit 3 has deep capital contribution and shareholder finance coverage", as
   }
 });
 
+test("Unit 5 has deep director, supervisor, officer, and controller duty coverage", async () => {
+  const topics = await readCollection("topics");
+  const resources = await readCollection("resources");
+  const resourceLookup = new Map(resources.map((resource) => [resource.id, resource]));
+  const unit5 = topics.find((topic) => topic.id === "directors-officers-and-controller-duties");
+  assert.ok(unit5, "Unit 5 topic must exist");
+
+  assert.ok(unit5.data.legislationIds.length >= 18, "Unit 5 needs deeper law, rule, and judicial guidance coverage");
+  assert.ok(unit5.data.caseIds.length >= 16, "Unit 5 needs a richer set of duty, supervisor, and controller cases");
+  assert.ok(unit5.data.readingIds.length >= 32, "Unit 5 needs expanded scholarship and practice readings");
+
+  for (const id of [
+    "csrc-management-shareholding-rules-2024",
+    "csrc-share-reduction-measures-2024",
+    "sse-listed-company-standardized-operations-guideline-2026",
+    "szse-mainboard-standardized-operations-guideline-2026",
+    "zhengzhou-siwei-related-party-supervisor-action",
+    "shenzhen-competing-business-supervisor-officer",
+    "modern-avenue-shareholder-derivative-fund-occupation",
+    "short-swing-profit-disgorgement-derivative-action",
+    "shi-fiduciary-duties-new-company-law-2024",
+    "zhao-fiduciary-duty-system-new-company-law-2024",
+    "wang-xiangchun-conflict-interest-transactions-2024",
+    "cai-internal-supervision-responsibility-supervisors-2018",
+    "deng-conflict-interest-rules-company-interest-2009"
+  ]) {
+    assert.ok(resourceLookup.has(id), `Unit 5 expected new or newly linked resource ${id}`);
+  }
+
+  const linkedIds = [
+    ...unit5.data.legislationIds,
+    ...unit5.data.caseIds,
+    ...unit5.data.readingIds
+  ];
+  const linkedResources = linkedIds.map((id) => resourceLookup.get(id)).filter(Boolean);
+  const tags = new Set(linkedResources.flatMap((resource) => resource.data.tags));
+  for (const tag of ["supervisors", "controllers", "company-interest harm", "related-party transactions"]) {
+    assert.ok(tags.has(tag), `Unit 5 needs ${tag} material`);
+  }
+});
+
 test("libraries include a deeper legislation set and literature set", async () => {
   const resources = await readCollection("resources");
   const primaryKinds = new Set(["law", "regulation", "judicial-interpretation", "rule", "comparative"]);
