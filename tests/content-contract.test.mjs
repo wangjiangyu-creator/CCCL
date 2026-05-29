@@ -135,6 +135,46 @@ test("resource records are source-backed and translation-aware", async () => {
   }
 });
 
+test("case library covers authoritative company, partnership, and securities case sources", async () => {
+  const resources = await readCollection("resources");
+  const caseResources = resources.filter((resource) => resource.data.kind === "case");
+  const caseIds = new Set(caseResources.map((resource) => resource.id));
+
+  for (const id of [
+    "guiding-case-148-gao-guang-third-party-revocation",
+    "guiding-case-163-jiangsu-textile-substantive-consolidation",
+    "xu-minghong-nanming-board-resolution",
+    "nantong-shuangying-lianda-partnership-liability",
+    "cicc-jie-xia-shareholder-information-rights",
+    "kangmei-special-representative-securities-litigation",
+    "zeda-yisheng-star-market-special-representative-litigation",
+    "jintongling-reorganization-special-representative-litigation"
+  ]) {
+    assert.ok(caseIds.has(id), `case library expected authoritative source case ${id}`);
+  }
+
+  assert.ok(
+    caseResources.some((resource) => resource.data.status === "Guiding case"),
+    "case library needs guiding cases"
+  );
+  assert.ok(
+    caseResources.some((resource) => resource.data.status === "SPC Gazette case"),
+    "case library needs SPC Gazette cases"
+  );
+  assert.ok(
+    caseResources.some((resource) => resource.data.tags.includes("People's Court Case Database")),
+    "case library needs People's Court Case Database references"
+  );
+  assert.ok(
+    caseResources.some((resource) => resource.data.tags.includes("investor protection typical case")),
+    "case library needs securities investor-protection typical cases"
+  );
+  assert.ok(
+    caseResources.some((resource) => resource.data.tags.includes("partnership enterprise")),
+    "case library needs partnership-enterprise cases"
+  );
+});
+
 test("topic pages have enriched legislation and reading coverage", async () => {
   const topics = await readCollection("topics");
 
