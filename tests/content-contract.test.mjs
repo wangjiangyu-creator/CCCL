@@ -273,6 +273,65 @@ test("libraries include a deeper legislation set and literature set", async () =
   assert.ok(readingMaterials.length >= 18, "expected an expanded literature and practice-note library");
 });
 
+test("comparative law page groups the requested jurisdictions by source category", async () => {
+  const comparativePage = await readFile(new URL("src/pages/comparative-law/index.astro", root), "utf8");
+  const resources = await readCollection("resources");
+  const resourceIds = new Set(resources.map((resource) => resource.id));
+
+  for (const phrase of [
+    "Statutes and Regulations, including codes of conduct",
+    "Cases",
+    "Reports by governments, exchanges, think tanks, NGOs",
+    "Books, Law journal/review articles, others",
+    "United States",
+    "United Kingdom",
+    "Hong Kong",
+    "Singapore"
+  ]) {
+    assert.ok(comparativePage.includes(phrase), `comparative law page missing ${phrase}`);
+  }
+
+  for (const id of [
+    "sec-game-stop-market-structure-report-2021",
+    "uk-restoring-trust-audit-corporate-governance-2021",
+    "hkex-corporate-governance-code-review-conclusions-2024",
+    "sgx-corporate-governance-code-disclosure-survey-2022",
+    "aronson-demand-futility",
+    "unocal-takeover-defensive-measures",
+    "weinberger-entire-fairness",
+    "blasius-shareholder-franchise",
+    "macaura-corporate-property",
+    "regal-hastings-corporate-opportunity",
+    "ebrahimi-just-equitable-winding-up",
+    "re-duomatic-unanimous-consent",
+    "yung-kee-just-equitable-winding-up",
+    "moulin-global-director-creditor-duty",
+    "re-pccw-scheme-vote-manipulation",
+    "re-chime-unfair-prejudice-corporate-relief",
+    "ecrc-land-director-duties",
+    "sakae-holdings-oppression-corporate-wrongs",
+    "sim-evenstar-just-equitable-winding-up",
+    "petroships-derivative-action-liquidation",
+    "revlon-takeover-duties",
+    "prest-v-petrodel-veil-piercing",
+    "waddington-multiple-derivative-actions",
+    "over-and-over-minority-oppression",
+    "bebchuk-increasing-shareholder-power-2005",
+    "gower-principles-modern-company-law-2021",
+    "goo-multiple-derivative-actions-2010",
+    "koh-tan-directors-duties-singapore-2019"
+  ]) {
+    assert.ok(resourceIds.has(id), `comparative law library expected ${id}`);
+  }
+
+  for (const jurisdiction of ["United States", "United Kingdom", "Hong Kong", "Singapore"]) {
+    const caseCount = resources.filter(
+      (resource) => resource.data.kind === "case" && resource.data.jurisdiction === jurisdiction
+    ).length;
+    assert.ok(caseCount >= 7, `comparative law library expected at least seven ${jurisdiction} cases`);
+  }
+});
+
 test("Company Law 2023 exposes the provided English version PDF", async () => {
   const resources = await readCollection("resources");
   const companyLaw = resources.find((resource) => resource.id === "prc-company-law-2023");

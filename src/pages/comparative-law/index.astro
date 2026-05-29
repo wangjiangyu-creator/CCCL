@@ -7,12 +7,79 @@ import { getCollection } from "astro:content";
 
 const allResources = await getCollection("resources");
 const topics = (await getCollection("topics")).sort(byTopicOrder);
+const targetJurisdictions = ["United States", "United Kingdom", "Hong Kong", "Singapore"];
 const resources = allResources
-  .filter((resource) => resource.data.kind === "comparative" || resource.data.jurisdiction !== "Mainland China")
+  .filter((resource) => targetJurisdictions.includes(resource.data.jurisdiction))
   .sort(byResourceTitle);
 const kinds = [...new Set(resources.map((resource) => resource.data.kind))].sort();
-const jurisdictions = [...new Set(resources.map((resource) => resource.data.jurisdiction))].sort();
 const topicOptions = topics.map((topic) => ({ label: topic.data.title, value: contentSlug(topic) }));
+
+type Resource = (typeof resources)[number];
+type ComparativeCategory = {
+  id: string;
+  title: string;
+  statLabel: string;
+  description: string;
+  kinds: Resource["data"]["kind"][];
+};
+
+const comparativeCategories: ComparativeCategory[] = [
+  {
+    id: "statutes-regulations",
+    title: "Statutes and Regulations, including codes of conduct",
+    statLabel: "Statutes and Regulations",
+    description:
+      "Core company statutes, securities statutes, listing rules, takeover codes, model acts, and corporate governance codes.",
+    kinds: ["comparative"]
+  },
+  {
+    id: "cases",
+    title: "Cases",
+    statLabel: "Cases",
+    description:
+      "Leading judicial decisions on corporate personality, directors' duties, takeover duties, derivative actions, minority protection, and shareholder remedies.",
+    kinds: ["case"]
+  },
+  {
+    id: "reports",
+    title: "Reports by governments, exchanges, think tanks, NGOs",
+    statLabel: "Reports",
+    description:
+      "Official and institutional reports, consultation conclusions, staff studies, and exchange reviews that show how company and securities-law policy is made.",
+    kinds: ["practice-note"]
+  },
+  {
+    id: "books-articles-others",
+    title: "Books, Law journal/review articles, others",
+    statLabel: "Books and Articles",
+    description:
+      "Books, law review articles, working papers, and other scholarship for deeper comparative analysis.",
+    kinds: ["literature"]
+  }
+];
+
+const categoryResources = comparativeCategories
+  .map((category) => {
+    const categoryItems = resources.filter((resource) => category.kinds.includes(resource.data.kind)).sort(byResourceTitle);
+    const jurisdictionGroups = targetJurisdictions
+      .map((jurisdiction) => ({
+        jurisdiction,
+        resources: categoryItems.filter((resource) => resource.data.jurisdiction === jurisdiction)
+      }))
+      .filter((group) => group.resources.length > 0);
+
+    return {
+      ...category,
+      count: categoryItems.length,
+      jurisdictionGroups
+    };
+  })
+  .filter((category) => category.count > 0);
+
+const categoryStats = comparativeCategories.map((category) => ({
+  label: category.statLabel,
+  count: resources.filter((resource) => category.kinds.includes(resource.data.kind)).length
+}));
 ---
 
 <BaseLayout title="Comparative Law" description="Comparative company-law materials for LW6134.">
@@ -21,17 +88,59 @@ const topicOptions = topics.map((topic) => ({ label: topic.data.title, value: co
       <p class="eyebrow">Comparative method</p>
       <h1 class="page-title">Comparative Law</h1>
       <p class="lede">
-        Common-law statutes, cases, and governance benchmarks for comparing Chinese
-        company-law solutions with Hong Kong, Delaware, UK, Singapore, and transnational materials.
+        Company-law and securities-law materials from the United States, United Kingdom,
+        Hong Kong, and Singapore, arranged by legal source so students can compare
+        doctrine, regulation, policy reform, and scholarship across common-law systems.
       </p>
+      <div class="stats-grid stats-grid--compact stats-grid--four">
+        {categoryStats.map((stat) => (
+          <div class="stat">
+            <strong>{stat.count}</strong>
+            <span>{stat.label}</span>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="shell">
-      <ResourceFilter label="Filter comparative materials" kinds={kinds} jurisdictions={jurisdictions} topicOptions={topicOptions} />
-      <div class="record-grid">
-        {resources.map((resource) => <ResourceCard resource={resource} />)}
+    <div class="shell" data-filter-scope>
+      <ResourceFilter
+        label="Filter comparative materials"
+        kinds={kinds}
+        jurisdictions={targetJurisdictions}
+        topicOptions={topicOptions}
+      />
+
+      <div class="tier-stack comparative-stack">
+        {
+          categoryResources.map((category) => (
+            <section class="resource-tier comparative-category" id={category.id}>
+              <div class="section-head resource-tier__head">
+                <div>
+                  <span class="eyebrow">Comparative source category</span>
+                  <h2>{category.title}</h2>
+                  <p>{category.description}</p>
+                </div>
+                <span class="badge">{category.count} records</span>
+              </div>
+
+              <div class="jurisdiction-stack">
+                {category.jurisdictionGroups.map((group) => (
+                  <section class="jurisdiction-group" aria-label={`${category.title}: ${group.jurisdiction}`}>
+                    <div class="jurisdiction-group__head">
+                      <h3>{group.jurisdiction}</h3>
+                      <span>{group.resources.length} records</span>
+                    </div>
+                    <div class="record-grid">
+                      {group.resources.map((resource) => <ResourceCard resource={resource} />)}
+                    </div>
+                  </section>
+                ))}
+              </div>
+            </section>
+          ))
+        }
       </div>
     </div>
   </section>

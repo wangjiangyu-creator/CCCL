@@ -190,6 +190,11 @@ a:hover {
   margin-top: 24px;
 }
 
+.stats-grid--four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 1040px;
+}
+
 .stat {
   border-top: 4px solid var(--green);
   background: rgba(255, 255, 255, 0.66);
@@ -202,6 +207,10 @@ a:hover {
 
 .stat:nth-child(3) {
   border-color: var(--red);
+}
+
+.stat:nth-child(4) {
+  border-color: var(--gold);
 }
 
 .stat strong {
@@ -416,6 +425,45 @@ select {
 
 .resource-tier:not(:has([data-resource-card]:not([hidden]))) {
   display: none;
+}
+
+.comparative-stack {
+  gap: 36px;
+}
+
+.jurisdiction-stack {
+  display: grid;
+  gap: 22px;
+}
+
+.jurisdiction-group {
+  scroll-margin-top: 96px;
+}
+
+.jurisdiction-group:not(:has([data-resource-card]:not([hidden]))) {
+  display: none;
+}
+
+.jurisdiction-group__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+  border-left: 4px solid var(--gold);
+  padding-left: 12px;
+}
+
+.jurisdiction-group__head h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+}
+
+.jurisdiction-group__head span {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 750;
 }
 
 .resource-tier__head {
@@ -767,6 +815,7 @@ select {
   .record-grid,
   .filter-grid,
   .stats-grid,
+  .stats-grid--four,
   .overview-grid,
   .course-map--wide {
     grid-template-columns: 1fr;
