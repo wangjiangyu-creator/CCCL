@@ -8,6 +8,7 @@ authority: "Supreme People's Court"
 date: "2012-04-10"
 status: "Guiding case"
 sourceUrl: "https://www.court.gov.cn/shenpan/xiangqing/4221.html"
+originalDecisionUrl: "https://www.court.gov.cn/shenpan/xiangqing/4221.html"
 translationStatus: "unavailable"
 summary: "A company dissolution dispute illustrating judicial intervention when shareholder deadlock and serious governance breakdown make continued operation difficult."
 topics: ["shareholder-rights-and-minority-protection", "distress-dissolution-and-liquidation"]
@@ -21,4 +22,3 @@ Use this to ask when dissolution is a governance remedy rather than merely an in
 ## Teaching Notes
 
 The case works well with hypotheticals involving 50-50 shareholders, blocked meetings, and failed access to company records.
-

@@ -8,6 +8,7 @@ authority: "Supreme People's Court Gazette"
 date: "2017"
 status: "SPC Gazette case"
 sourceUrl: "https://gongbao.court.gov.cn/Details/9d09b46af8aab27bfdcf69bc7075d7.html"
+originalDecisionUrl: "https://gongbao.court.gov.cn/Details/9d09b46af8aab27bfdcf69bc7075d7.html"
 translationStatus: "unavailable"
 summary: "A Gazette case on what counts as a board resolution and how courts assess corporate decision-making documents for company-law purposes."
 topics: ["corporate-organs-and-governance", "formation-registration-and-articles", "shareholder-rights-and-minority-protection"]

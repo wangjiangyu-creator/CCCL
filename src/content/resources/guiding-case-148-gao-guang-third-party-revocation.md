@@ -8,6 +8,7 @@ authority: "Supreme People's Court"
 date: "2021-02-19"
 status: "Guiding case"
 sourceUrl: "https://www.court.gov.cn/shenpan/xiangqing/288591.html"
+originalDecisionUrl: "https://www.court.gov.cn/shenpan/xiangqing/288591.html"
 translationStatus: "unavailable"
 summary: "A guiding case holding that a shareholder normally lacks a direct legal interest to bring a third-party revocation action against an effective judgment involving the company and another party."
 topics: ["business-forms-and-personality", "shareholder-rights-and-minority-protection", "corporate-organs-and-governance"]

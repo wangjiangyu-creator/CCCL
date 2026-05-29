@@ -8,6 +8,7 @@ authority: "Shanghai No. 2 Intermediate People's Court; Supreme People's Court G
 date: "2019-10-11"
 status: "SPC Gazette case"
 sourceUrl: "https://gongbao.court.gov.cn/Details/e67d7cedd3b6f33cc78c1da945b9af.html"
+originalDecisionUrl: "https://gongbao.court.gov.cn/Details/e67d7cedd3b6f33cc78c1da945b9af.html"
 translationStatus: "instructor-summary"
 summary: "Gazette case holding that a shareholder resolution cannot use capital majority to deprive another shareholder of the agreed benefit of a capital contribution period without legal basis or urgent justification."
 topics: ["capital-contributions-and-shareholder-finance", "corporate-organs-and-governance", "shareholder-rights-and-minority-protection"]

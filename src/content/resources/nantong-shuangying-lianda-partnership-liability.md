@@ -8,6 +8,7 @@ authority: "Supreme People's Court Gazette"
 date: "2009"
 status: "SPC Gazette case"
 sourceUrl: "https://gongbao.court.gov.cn/Details/3ad0ce7ac30890fd15c1653358ba4a.html"
+originalDecisionUrl: "https://gongbao.court.gov.cn/Details/3ad0ce7ac30890fd15c1653358ba4a.html"
 translationStatus: "unavailable"
 summary: "A Gazette case on identifying a partnership relationship behind an externally registered sole proprietorship and allocating civil liability among partners."
 topics: ["business-forms-and-personality", "veil-piercing-groups-and-creditors"]

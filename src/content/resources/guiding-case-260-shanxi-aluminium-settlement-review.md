@@ -8,6 +8,7 @@ authority: "Supreme People's Court"
 date: "2025-05-28"
 status: "Guiding case"
 sourceUrl: "https://www.court.gov.cn/fabu/xiangqing/466291.html"
+originalDecisionUrl: "https://www.court.gov.cn/fabu/xiangqing/466291.html"
 translationStatus: "instructor-summary"
 summary: "A guiding case requiring substantive judicial review of settlement or mediation terms in environmental public-interest litigation."
 topics: ["business-forms-and-personality"]

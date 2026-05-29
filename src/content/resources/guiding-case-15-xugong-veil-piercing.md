@@ -8,6 +8,7 @@ authority: "Supreme People's Court"
 date: "2013-01-31"
 status: "Guiding case"
 sourceUrl: "https://www.court.gov.cn/shenpan/xiangqing/13321.html"
+originalDecisionUrl: "https://www.court.gov.cn/shenpan/xiangqing/13321.html"
 translationStatus: "unavailable"
 summary: "A corporate personality and creditor-protection case involving affiliated companies, commingled business, overlapping personnel, and confusion of assets."
 topics: ["business-forms-and-personality", "veil-piercing-groups-and-creditors"]
@@ -21,4 +22,3 @@ Use this as the main Chinese case for veil piercing and group-company confusion.
 ## Teaching Notes
 
 Students should identify the concrete facts showing personality confusion rather than reciting veil-piercing language at a high level.
-

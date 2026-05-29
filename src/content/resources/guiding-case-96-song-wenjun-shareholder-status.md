@@ -8,6 +8,7 @@ authority: "Supreme People's Court"
 date: "2018-06-20"
 status: "Guiding case"
 sourceUrl: "https://www.court.gov.cn/shenpan/xiangqing/104292.html"
+originalDecisionUrl: "https://www.court.gov.cn/shenpan/xiangqing/104292.html"
 translationStatus: "unavailable"
 summary: "A shareholder-status case on charter-based transfer restrictions and agreed repurchase arrangements in a restructured state-owned enterprise."
 topics: ["formation-registration-and-articles", "shareholder-rights-and-minority-protection", "state-owned-and-foreign-invested-companies"]

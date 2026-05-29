@@ -8,6 +8,7 @@ authority: "Shanghai Financial Court"
 date: "2021-05-17"
 status: "Local court typical case"
 sourceUrl: "https://www.hshfy.sh.cn/shfy/web/xxnr.jsp?pa=aaWQ9MjAyMjA3NzYmeGg9MSZsbWRtPWxtNTE5z&zd=xwzx"
+originalDecisionUrl: "https://www.hshfy.sh.cn/shfy/web/xxnr.jsp?pa=aaWQ9MjAyMjA3NzYmeGg9MSZsbWRtPWxtNTE5z&zd=xwzx"
 translationStatus: "instructor-summary"
 summary: "A Shanghai Financial Court case applying the ordinary representative action mechanism to a securities false-statement dispute involving 315 investors and over RMB 123 million in compensation."
 topics: ["listed-companies-securities-and-disclosure", "shareholder-rights-and-minority-protection"]

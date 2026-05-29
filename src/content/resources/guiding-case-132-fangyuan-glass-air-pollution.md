@@ -8,6 +8,7 @@ authority: "Supreme People's Court"
 date: "2019-12-26"
 status: "Guiding case"
 sourceUrl: "https://www.court.gov.cn/shenpan/xiangqing/216941.html"
+originalDecisionUrl: "https://www.court.gov.cn/shenpan/xiangqing/216941.html"
 translationStatus: "instructor-summary"
 summary: "A guiding case recognizing that a polluter's voluntary investment in effective pollution-control facilities may reduce damages in environmental public-interest litigation."
 topics: ["business-forms-and-personality"]

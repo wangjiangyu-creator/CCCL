@@ -8,6 +8,7 @@ authority: "Supreme People's Court"
 date: "2023-11-21"
 status: "Guiding case"
 sourceUrl: "https://www.court.gov.cn/shenpan/xiangqing/418262.html"
+originalDecisionUrl: "https://www.court.gov.cn/shenpan/xiangqing/418262.html"
 translationStatus: "instructor-summary"
 summary: "A leading environmental public-interest case applying corporate personality denial to make shareholders jointly liable for a company's ecological damage debts."
 topics: ["business-forms-and-personality", "veil-piercing-groups-and-creditors"]

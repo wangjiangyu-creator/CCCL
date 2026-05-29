@@ -8,6 +8,7 @@ authority: "Supreme People's Court"
 date: "2025-05-28"
 status: "Guiding case"
 sourceUrl: "https://www.court.gov.cn/zixun/xiangqing/466281.html"
+originalDecisionUrl: "https://www.court.gov.cn/zixun/xiangqing/466281.html"
 translationStatus: "instructor-summary"
 summary: "A related environmental public-interest case requiring courts to confirm that public-interest claims have been fully realized before allowing withdrawal."
 topics: ["business-forms-and-personality"]

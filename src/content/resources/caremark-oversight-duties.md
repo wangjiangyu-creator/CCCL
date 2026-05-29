@@ -7,6 +7,7 @@ authority: "Delaware Court of Chancery"
 date: "1996-09-25"
 status: "Leading Delaware case"
 sourceUrl: "https://law.justia.com/cases/delaware/court-of-chancery/1996/13670-3.html"
+originalDecisionUrl: "https://law.justia.com/cases/delaware/court-of-chancery/1996/13670-3.html"
 translationStatus: "not-needed"
 summary: "A foundational Delaware case on board oversight duties and the difficulty of imposing liability for failure to monitor corporate compliance."
 topics: ["directors-officers-and-controller-duties", "listed-companies-securities-and-disclosure"]
@@ -20,4 +21,3 @@ Use this to compare Chinese diligence duties with Delaware's narrow but influent
 ## Teaching Notes
 
 Caremark is best taught as a standard-setting case, not as a routine liability pathway.
-

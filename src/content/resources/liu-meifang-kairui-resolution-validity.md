@@ -8,6 +8,7 @@ authority: "Supreme People's Court Gazette"
 date: "2018"
 status: "SPC Gazette case"
 sourceUrl: "https://gongbao.court.gov.cn/Details/64f3fab544d8d5fe0164ed38a39c94.html"
+originalDecisionUrl: "https://gongbao.court.gov.cn/Details/64f3fab544d8d5fe0164ed38a39c94.html"
 translationStatus: "unavailable"
 summary: "A Gazette case on company-resolution validity, useful for testing defects in convening, voting, and the legal characterization of corporate decisions."
 topics: ["corporate-organs-and-governance", "shareholder-rights-and-minority-protection", "formation-registration-and-articles"]

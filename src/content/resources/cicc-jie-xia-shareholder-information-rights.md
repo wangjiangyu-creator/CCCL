@@ -8,6 +8,7 @@ authority: "China International Commercial Court"
 date: "2026-02-28"
 status: "Reference case"
 sourceUrl: "https://cicc.court.gov.cn/html/1/380/385/12647.html"
+originalDecisionUrl: "https://cicc.court.gov.cn/html/1/380/385/12647.html"
 translationStatus: "instructor-summary"
 summary: "A reference case on a foreign shareholder's information rights in a Chinese-foreign joint venture, combining domestic company law, foreign-law ascertainment, preservation, and settlement."
 topics: ["state-owned-and-foreign-invested-companies", "shareholder-rights-and-minority-protection", "corporate-organs-and-governance"]

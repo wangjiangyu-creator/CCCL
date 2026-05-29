@@ -8,6 +8,7 @@ authority: "Supreme People's Court"
 date: "2012-09-18"
 status: "Guiding case"
 sourceUrl: "https://www.court.gov.cn/shenpan/xiangqing/13307.html"
+originalDecisionUrl: "https://www.court.gov.cn/shenpan/xiangqing/13307.html"
 translationStatus: "unavailable"
 summary: "A company-resolution case emphasizing the limits of judicial review where the dispute concerns business judgment rather than procedural or charter illegality."
 topics: ["formation-registration-and-articles", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]

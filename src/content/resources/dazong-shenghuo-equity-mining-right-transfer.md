@@ -8,6 +8,7 @@ authority: "Supreme People's Court"
 date: "2015"
 status: "SPC Gazette case"
 sourceUrl: "https://gongbao.court.gov.cn/Details/a513de1b6f818d4508e3930c46ee83.html"
+originalDecisionUrl: "https://gongbao.court.gov.cn/Details/a513de1b6f818d4508e3930c46ee83.html"
 translationStatus: "unavailable"
 summary: "A Gazette equity-transfer case distinguishing the transfer of company shares from the transfer of the underlying mining right held by the company."
 topics: ["business-forms-and-personality", "formation-registration-and-articles", "shareholder-rights-and-minority-protection"]

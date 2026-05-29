@@ -8,6 +8,7 @@ authority: "Supreme People's Court"
 date: "2021-09-18"
 status: "Guiding case"
 sourceUrl: "https://www.court.gov.cn/shenpan/xiangqing/325571.html"
+originalDecisionUrl: "https://www.court.gov.cn/shenpan/xiangqing/325571.html"
 translationStatus: "unavailable"
 summary: "A guiding case on when affiliated companies with severe personality and asset commingling may be substantively consolidated in bankruptcy reorganization."
 topics: ["veil-piercing-groups-and-creditors", "distress-dissolution-and-liquidation", "business-forms-and-personality"]

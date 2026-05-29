@@ -34,6 +34,7 @@ const resourceCollection = defineCollection({
     date: z.string().optional(),
     status: z.string().optional(),
     sourceUrl: z.string().url(),
+    originalDecisionUrl: z.string().url().optional(),
     translationUrl: z.union([z.string().url(), z.string().regex(/^\//)]).optional(),
     translationStatus: z.enum([
       "official",

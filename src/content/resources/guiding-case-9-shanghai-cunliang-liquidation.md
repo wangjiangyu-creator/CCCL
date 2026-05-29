@@ -8,6 +8,7 @@ authority: "Supreme People's Court"
 date: "2012-09-18"
 status: "Guiding case"
 sourceUrl: "https://www.court.gov.cn/shenpan/xiangqing/13306.html"
+originalDecisionUrl: "https://www.court.gov.cn/shenpan/xiangqing/13306.html"
 translationStatus: "unavailable"
 summary: "A leading case on shareholders' liquidation obligations and creditor protection after a company is deregulated or loses its business license."
 topics: ["veil-piercing-groups-and-creditors", "distress-dissolution-and-liquidation"]
@@ -21,4 +22,3 @@ Use this to show that limited liability does not eliminate post-dissolution duti
 ## Teaching Notes
 
 Ask students to separate primary company debt from secondary liability arising from failure to liquidate properly.
-

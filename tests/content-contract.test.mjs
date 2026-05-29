@@ -175,6 +175,36 @@ test("case library covers authoritative company, partnership, and securities cas
   );
 });
 
+test("case records expose original judgment or decision links when available", async () => {
+  const resources = await readCollection("resources");
+  const resourceLookup = new Map(resources.map((resource) => [resource.id, resource]));
+
+  for (const id of [
+    "guiding-case-148-gao-guang-third-party-revocation",
+    "guiding-case-163-jiangsu-textile-substantive-consolidation",
+    "xu-minghong-nanming-board-resolution",
+    "liu-meifang-kairui-resolution-validity",
+    "dazong-shenghuo-equity-mining-right-transfer",
+    "nantong-shuangying-lianda-partnership-liability",
+    "shixin-ronghe-changan-trust-limited-partnership-derivative",
+    "cicc-jie-xia-shareholder-information-rights",
+    "cicc-financial-product-hk-share-pledge-guarantee",
+    "feile-audio-ordinary-representative-litigation"
+  ]) {
+    const resource = resourceLookup.get(id);
+    assert.ok(resource, `expected case resource ${id}`);
+    assert.equal(
+      typeof resource.data.originalDecisionUrl,
+      "string",
+      `${resource.file} should expose an originalDecisionUrl`
+    );
+    assert.ok(
+      /^https?:\/\//.test(resource.data.originalDecisionUrl),
+      `${resource.file} originalDecisionUrl should be absolute`
+    );
+  }
+});
+
 test("topic pages have enriched legislation and reading coverage", async () => {
   const topics = await readCollection("topics");
 

@@ -14,6 +14,9 @@ export async function getStaticPaths() {
 
 const { resource } = Astro.props;
 const { Content } = await resource.render();
+const originalDecisionUrl = resource.data.originalDecisionUrl;
+const primarySourceUrl = originalDecisionUrl ?? resource.data.sourceUrl;
+const primarySourceLabel = originalDecisionUrl ? "Open original judgment / decision" : "Open source";
 ---
 
 <BaseLayout title={resource.data.title} description={resource.data.summary}>
@@ -28,7 +31,14 @@ const { Content } = await resource.render();
       {resource.data.originalTitle && <p class="original-title">{resource.data.originalTitle}</p>}
       <p class="lede">{resource.data.summary}</p>
       <div class="hero-actions">
-        <a class="primary-link" href={resource.data.sourceUrl} target="_blank" rel="noreferrer">Open source</a>
+        <a class="primary-link" href={primarySourceUrl} target="_blank" rel="noreferrer">{primarySourceLabel}</a>
+        {
+          originalDecisionUrl && originalDecisionUrl !== resource.data.sourceUrl && (
+            <a class="secondary-link" href={resource.data.sourceUrl} target="_blank" rel="noreferrer">
+              Open source note
+            </a>
+          )
+        }
         {
           resource.data.translationUrl && (
             <a class="secondary-link" href={withBase(resource.data.translationUrl)} target="_blank" rel="noreferrer">

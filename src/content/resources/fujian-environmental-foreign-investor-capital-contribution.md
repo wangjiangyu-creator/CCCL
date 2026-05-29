@@ -8,6 +8,7 @@ authority: "Supreme People's Court"
 date: "2014-06-11"
 status: "SPC Gazette case"
 sourceUrl: "https://gongbao.court.gov.cn/Details/7f487bb61c8c587ca9dfd61c9f3c2c.html"
+originalDecisionUrl: "https://gongbao.court.gov.cn/Details/7f487bb61c8c587ca9dfd61c9f3c2c.html"
 translationStatus: "instructor-summary"
 summary: "Cross-border shareholder contribution dispute involving a Singapore parent and its Fujian wholly foreign-owned enterprise, addressing applicable law, liquidator authority, representative authority, and unpaid capital."
 topics: ["capital-contributions-and-shareholder-finance", "state-owned-and-foreign-invested-companies", "formation-registration-and-articles"]

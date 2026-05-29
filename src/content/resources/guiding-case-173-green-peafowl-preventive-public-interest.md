@@ -8,6 +8,7 @@ authority: "Supreme People's Court"
 date: "2021-12-03"
 status: "Guiding case"
 sourceUrl: "https://www.court.gov.cn/fabu/xiangqing/334691.html"
+originalDecisionUrl: "https://www.court.gov.cn/fabu/xiangqing/334691.html"
 translationStatus: "instructor-summary"
 summary: "A related preventive environmental public-interest case requiring courts to assess major ecological risks to endangered species before irreversible damage occurs."
 topics: ["business-forms-and-personality"]
