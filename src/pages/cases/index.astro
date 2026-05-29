@@ -2,7 +2,7 @@
 import ResourceCard from "@components/ResourceCard.astro";
 import ResourceFilter from "@components/ResourceFilter.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
-import { byTopicOrder, contentSlug, resourcesByKind } from "@lib/collections";
+import { byResourceTitle, byTopicOrder, contentSlug, resourcesByKind } from "@lib/collections";
 import { getCollection } from "astro:content";
 
 const allResources = await getCollection("resources");
@@ -10,6 +10,54 @@ const topics = (await getCollection("topics")).sort(byTopicOrder);
 const resources = resourcesByKind(allResources, ["case"]);
 const jurisdictions = [...new Set(resources.map((resource) => resource.data.jurisdiction))].sort();
 const topicOptions = topics.map((topic) => ({ label: topic.data.title, value: contentSlug(topic) }));
+
+type Resource = (typeof resources)[number];
+
+const caseIssueGroups = [
+  ...topics.map((topic) => ({
+    id: contentSlug(topic),
+    title: topic.data.title,
+    description: topic.data.summary
+  })),
+  {
+    id: "other-case-issues",
+    title: "Other Case Issues",
+    description: "Cases whose issue mix does not map cleanly to a single course topic."
+  }
+];
+
+const caseIssueIds = new Set(caseIssueGroups.map((group) => group.id));
+const assignedTopic = (resource: Resource) =>
+  resource.data.topics.find((topicSlug) => caseIssueIds.has(topicSlug)) ?? "other-case-issues";
+const isChineseCase = (resource: Resource) => resource.data.jurisdiction.includes("Mainland China");
+
+const caseOriginGroups = [
+  {
+    id: "chinese-cases",
+    title: "Chinese Cases",
+    description:
+      "Mainland China cases, including cross-border disputes where the Mainland case is the organizing reference point.",
+    resources: resources.filter(isChineseCase)
+  },
+  {
+    id: "foreign-cases",
+    title: "Foreign Cases",
+    description:
+      "Comparative cases from common-law and other non-Mainland jurisdictions for doctrinal comparison.",
+    resources: resources.filter((resource) => !isChineseCase(resource))
+  }
+].map((origin) => ({
+  ...origin,
+  count: origin.resources.length,
+  issueGroups: caseIssueGroups
+    .map((issue) => ({
+      ...issue,
+      resources: origin.resources
+        .filter((resource) => assignedTopic(resource) === issue.id)
+        .sort(byResourceTitle)
+    }))
+    .filter((issue) => issue.resources.length > 0)
+}));
 ---
 
 <BaseLayout title="Cases" description="Guiding cases and comparative company-law cases for LW6134.">
@@ -25,10 +73,42 @@ const topicOptions = topics.map((topic) => ({ label: topic.data.title, value: co
   </section>
 
   <section class="section">
-    <div class="shell">
+    <div class="shell" data-filter-scope>
       <ResourceFilter label="Filter cases" jurisdictions={jurisdictions} topicOptions={topicOptions} />
-      <div class="record-grid">
-        {resources.map((resource) => <ResourceCard resource={resource} />)}
+
+      <div class="tier-stack case-library-stack">
+        {
+          caseOriginGroups.map((origin) => (
+            <section class="resource-tier case-origin-group" id={origin.id}>
+              <div class="section-head resource-tier__head case-origin-group__head">
+                <div>
+                  <span class="eyebrow">Case system</span>
+                  <h2>{origin.title}</h2>
+                  <p>{origin.description}</p>
+                </div>
+                <span class="badge">{origin.count} cases</span>
+              </div>
+
+              <div class="jurisdiction-stack case-issue-stack">
+                {origin.issueGroups.map((issue) => (
+                  <section class="jurisdiction-group case-issue-group" aria-label={`${origin.title}: ${issue.title}`}>
+                    <div class="jurisdiction-group__head case-issue-group__head">
+                      <div>
+                        <span class="eyebrow">Issue category</span>
+                        <h3>{issue.title}</h3>
+                      </div>
+                      <span>{issue.resources.length} cases</span>
+                    </div>
+                    <p class="case-issue-group__summary">{issue.description}</p>
+                    <div class="record-grid">
+                      {issue.resources.map((resource) => <ResourceCard resource={resource} />)}
+                    </div>
+                  </section>
+                ))}
+              </div>
+            </section>
+          ))
+        }
       </div>
     </div>
   </section>

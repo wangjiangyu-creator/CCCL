@@ -431,6 +431,34 @@ select {
   gap: 36px;
 }
 
+.case-library-stack {
+  gap: 42px;
+}
+
+.case-issue-stack {
+  gap: 28px;
+}
+
+.case-origin-group__head h2 {
+  margin-bottom: 4px;
+}
+
+.case-issue-group__head {
+  align-items: flex-start;
+}
+
+.case-issue-group__head .eyebrow {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.case-issue-group__summary {
+  max-width: 760px;
+  margin: -4px 0 14px 16px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
 .jurisdiction-stack {
   display: grid;
   gap: 22px;

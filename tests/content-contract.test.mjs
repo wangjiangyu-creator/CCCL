@@ -205,6 +205,29 @@ test("case records expose original judgment or decision links when available", a
   }
 });
 
+test("cases page separates Chinese and foreign cases by issue", async () => {
+  const casesPage = await readFile(new URL("src/pages/cases/index.astro", root), "utf8");
+
+  for (const phrase of [
+    "Chinese Cases",
+    "Foreign Cases",
+    "caseIssueGroups",
+    "isChineseCase",
+    "assignedTopic",
+    "Issue category",
+    "topics.map",
+    "topic.data.title",
+    "issue.title"
+  ]) {
+    assert.ok(casesPage.includes(phrase), `cases page missing ${phrase}`);
+  }
+
+  assert.ok(
+    !casesPage.includes("{resources.map((resource) => <ResourceCard resource={resource} />)}"),
+    "cases page should not render one flat case list"
+  );
+});
+
 test("topic pages have enriched legislation and reading coverage", async () => {
   const topics = await readCollection("topics");
 
