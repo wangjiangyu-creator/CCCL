@@ -10,8 +10,8 @@ status: "People's Justice case report"
 sourceUrl: "https://www.sohu.com/a/498387562_121123868"
 translationStatus: "instructor-summary"
 summary: "Administrative case on identity misuse in company formation, emphasizing targeted correction of erroneous registration items rather than wholesale denial of corporate personality."
-topics: ["formation-registration-and-articles", "business-forms-and-personality"]
-tags: ["identity misuse", "company registration", "administrative litigation", "corporate personality", "formal review"]
+topics: ["formation-registration-and-articles", "business-forms-and-personality", "shareholder-rights-and-minority-protection"]
+tags: ["identity misuse", "company registration", "shareholder status", "administrative litigation", "corporate personality", "formal review"]
 ---
 
 ## Brief English Introduction
@@ -25,4 +25,3 @@ Use this case to separate correction of false registered particulars from dissol
 ## Teaching Notes
 
 Pair it with the formal-review readings to test how far a registration authority's review duty should extend.
-

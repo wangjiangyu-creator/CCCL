@@ -10,8 +10,8 @@ status: "Current"
 sourceUrl: "https://www.neeq.com.cn/m/class_c3/200025688.html"
 translationStatus: "unavailable"
 summary: "NEEQ governance rules for quoted companies, including articles, shareholder meetings, board and supervisory arrangements, directors and officers, related-party transactions, guarantees, and investor protection."
-topics: ["corporate-organs-and-governance", "directors-officers-and-controller-duties", "listed-companies-securities-and-disclosure"]
-tags: ["NEEQ", "quoted companies", "corporate governance", "minority shareholders"]
+topics: ["corporate-organs-and-governance", "shareholder-rights-and-minority-protection", "directors-officers-and-controller-duties", "listed-companies-securities-and-disclosure"]
+tags: ["NEEQ", "quoted companies", "corporate governance", "shareholders meeting", "voting", "minority shareholders"]
 ---
 
 ## Use It For

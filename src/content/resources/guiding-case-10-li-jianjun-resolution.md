@@ -11,8 +11,8 @@ sourceUrl: "https://www.court.gov.cn/shenpan/xiangqing/13307.html"
 originalDecisionUrl: "https://www.court.gov.cn/shenpan/xiangqing/13307.html"
 translationStatus: "unavailable"
 summary: "A company-resolution case emphasizing the limits of judicial review where the dispute concerns business judgment rather than procedural or charter illegality."
-topics: ["formation-registration-and-articles", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
-tags: ["guiding case", "company resolutions", "business judgment", "corporate autonomy"]
+topics: ["formation-registration-and-articles", "corporate-organs-and-governance", "shareholder-rights-and-minority-protection", "directors-officers-and-controller-duties"]
+tags: ["guiding case", "company resolutions", "shareholder meeting", "business judgment", "corporate autonomy"]
 ---
 
 ## Use It For

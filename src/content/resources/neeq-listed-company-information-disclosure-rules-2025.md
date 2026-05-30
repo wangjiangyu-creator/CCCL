@@ -10,8 +10,8 @@ status: "Current"
 sourceUrl: "https://www.neeq.com.cn/important_news/200025616.html"
 translationStatus: "unavailable"
 summary: "NEEQ rules for quoted-company information disclosure, including periodic reports, interim reports, disclosure management, confidentiality, exemptions, and sponsor-broker supervision."
-topics: ["listed-companies-securities-and-disclosure", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
-tags: ["NEEQ", "information disclosure", "quoted companies", "sponsor brokers"]
+topics: ["listed-companies-securities-and-disclosure", "corporate-organs-and-governance", "shareholder-rights-and-minority-protection", "directors-officers-and-controller-duties"]
+tags: ["NEEQ", "information disclosure", "information rights", "quoted companies", "sponsor brokers"]
 ---
 
 ## Use It For

@@ -10,8 +10,8 @@ status: "Typical case"
 sourceUrl: "https://ipc.court.gov.cn/zh-cn/news/view-1939.html"
 translationStatus: "instructor-summary"
 summary: "Plant-variety infringement case in which original shareholders transferred unpaid subscribed equity for zero consideration to avoid a company debt, leading to supplementary liability."
-topics: ["capital-contributions-and-shareholder-finance", "veil-piercing-groups-and-creditors"]
-tags: ["malicious equity transfer", "unmatured contribution", "creditor protection", "supplementary liability", "SPC IP Court"]
+topics: ["capital-contributions-and-shareholder-finance", "shareholder-rights-and-minority-protection", "veil-piercing-groups-and-creditors"]
+tags: ["malicious equity transfer", "equity transfer", "unmatured contribution", "creditor protection", "supplementary liability", "SPC IP Court"]
 ---
 
 ## Brief English Introduction

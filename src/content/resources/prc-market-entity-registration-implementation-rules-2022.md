@@ -10,8 +10,8 @@ status: "Current"
 sourceUrl: "https://www.samr.gov.cn/xyjgs/flfg/art/2023/art_9394a9d9f563460080737fba25b63e73.html"
 translationStatus: "unavailable"
 summary: "Detailed SAMR rules on market-entity registration, filing materials, registration standards, changes, suspension, deregistration, archival management, supervision, and legal responsibility."
-topics: ["formation-registration-and-articles", "business-forms-and-personality", "capital-contributions-and-shareholder-finance", "distress-dissolution-and-liquidation"]
-tags: ["registration", "SAMR", "market entities", "filings", "deregistration"]
+topics: ["formation-registration-and-articles", "business-forms-and-personality", "capital-contributions-and-shareholder-finance", "shareholder-rights-and-minority-protection", "distress-dissolution-and-liquidation"]
+tags: ["registration", "SAMR", "market entities", "filings", "shareholder status", "deregistration"]
 ---
 
 ## Use It For
@@ -21,4 +21,3 @@ Use this when a question turns on filing practice, registered particulars, amend
 ## Teaching Notes
 
 Formation disputes rarely involve only private agreements. Students should ask which facts were filed, which were merely agreed, and which were visible to third parties.
-

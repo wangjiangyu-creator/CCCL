@@ -345,6 +345,96 @@ test("Unit 5 has deep director, supervisor, officer, and controller duty coverag
   }
 });
 
+test("Unit 6 has deep shareholder status, rights, transfer, and minority-protection coverage", async () => {
+  const topics = await readCollection("topics");
+  const resources = await readCollection("resources");
+  const resourceLookup = new Map(resources.map((resource) => [resource.id, resource]));
+  const unit6 = topics.find((topic) => topic.id === "shareholder-rights-and-minority-protection");
+  assert.ok(unit6, "Unit 6 topic must exist");
+
+  assert.ok(unit6.data.legislationIds.length >= 28, "Unit 6 needs broader law, rule, and judicial guidance coverage");
+  assert.ok(unit6.data.caseIds.length >= 20, "Unit 6 needs a richer set of shareholder rights and dispute cases");
+  assert.ok(unit6.data.readingIds.length >= 30, "Unit 6 needs expanded scholarship and practice readings");
+
+  for (const id of [
+    "prc-civil-code-2020",
+    "prc-market-entity-registration-regulation-2021",
+    "prc-market-entity-registration-implementation-rules-2022",
+    "samr-registration-archives-measures-2025",
+    "prc-company-law-time-effect-2024",
+    "spc-company-law-draft-interpretation-2025",
+    "csrc-listed-company-shareholders-meeting-rules-2025",
+    "csrc-cash-dividend-guideline-2023",
+    "csrc-share-reduction-measures-2024",
+    "csrc-share-repurchase-rules-2023",
+    "csrc-takeover-measures-2020",
+    "csrc-sse-stock-listing-rules-2025",
+    "csrc-szse-stock-listing-rules-2025",
+    "csrc-bse-stock-listing-rules-2025",
+    "neeq-listed-company-governance-rules-2025",
+    "neeq-dual-class-voting-rights-guideline-2025",
+    "guiding-case-10-li-jianjun-resolution",
+    "liu-meifang-kairui-resolution-validity",
+    "cicc-jie-xia-shareholder-information-rights",
+    "zhang-wen-qixia-identity-registration",
+    "dazong-shenghuo-equity-mining-right-transfer",
+    "yao-jincheng-hongda-contribution-period-resolution",
+    "today-seed-malicious-equity-transfer",
+    "modern-avenue-shareholder-derivative-fund-occupation",
+    "short-swing-profit-disgorgement-derivative-action",
+    "jiang-plural-agreements-company-law-2026",
+    "zhou-registry-shareholders-legal-status-2025",
+    "shareholder-status-identification-business-registration-2005",
+    "hankun-minority-shareholder-protection-2024",
+    "lawasia-shareholders-information-right-2024",
+    "lawasia-shareholder-exit-options-2025",
+    "lawasia-new-share-disposal-rules-2025"
+  ]) {
+    assert.ok(resourceLookup.has(id), `Unit 6 expected resource ${id}`);
+  }
+
+  const linkedIds = [
+    ...unit6.data.legislationIds,
+    ...unit6.data.caseIds,
+    ...unit6.data.readingIds
+  ];
+  const linkedResources = linkedIds.map((id) => resourceLookup.get(id)).filter(Boolean);
+  const kinds = new Set(linkedResources.map((resource) => resource.data.kind));
+  for (const kind of ["law", "regulation", "judicial-interpretation", "rule", "case", "comparative", "literature", "practice-note"]) {
+    assert.ok(kinds.has(kind), `Unit 6 needs ${kind} material`);
+  }
+
+  const authorities = new Set(linkedResources.map((resource) => resource.data.authority).filter(Boolean));
+  for (const authority of [
+    "National People's Congress",
+    "State Council",
+    "State Administration for Market Regulation",
+    "Supreme People's Court",
+    "China Securities Regulatory Commission",
+    "Shanghai Stock Exchange",
+    "Shenzhen Stock Exchange",
+    "Beijing Stock Exchange",
+    "National Equities Exchange and Quotations"
+  ]) {
+    assert.ok(authorities.has(authority), `Unit 6 needs ${authority} material`);
+  }
+
+  const tags = new Set(linkedResources.flatMap((resource) => resource.data.tags));
+  for (const tag of [
+    "shareholder status",
+    "shareholder register",
+    "information rights",
+    "voting",
+    "equity transfer",
+    "profit distribution",
+    "shareholder agreement",
+    "minority shareholders",
+    "derivative action"
+  ]) {
+    assert.ok(tags.has(tag), `Unit 6 needs ${tag} material`);
+  }
+});
+
 test("libraries include a deeper legislation set and literature set", async () => {
   const resources = await readCollection("resources");
   const primaryKinds = new Set(["law", "regulation", "judicial-interpretation", "rule", "comparative"]);

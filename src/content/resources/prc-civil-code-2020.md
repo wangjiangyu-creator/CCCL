@@ -10,8 +10,8 @@ status: "Current"
 sourceUrl: "https://english.www.gov.cn/archive/lawsregulations/202012/31/content_WS5fedad98c6d0f72576943005.html"
 translationStatus: "official"
 summary: "The general private-law framework for legal persons, civil juristic acts, agency, property, contracts, tort liability, and remedies that company-law disputes often rely on."
-topics: ["business-forms-and-personality", "formation-registration-and-articles", "capital-contributions-and-shareholder-finance", "veil-piercing-groups-and-creditors"]
-tags: ["civil code", "legal persons", "agency", "contracts"]
+topics: ["business-forms-and-personality", "formation-registration-and-articles", "capital-contributions-and-shareholder-finance", "shareholder-rights-and-minority-protection", "veil-piercing-groups-and-creditors"]
+tags: ["civil code", "legal persons", "agency", "contracts", "shareholder agreement", "abuse of rights"]
 ---
 
 ## Use It For

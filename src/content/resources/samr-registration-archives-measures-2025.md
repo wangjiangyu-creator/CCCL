@@ -11,7 +11,7 @@ sourceUrl: "https://www.gov.cn/zhengce/202502/content_7005685.htm"
 translationStatus: "unavailable"
 summary: "Rules on registration archives for market entities, relevant to public records, document access, and evidentiary use of registration files."
 topics: ["formation-registration-and-articles", "shareholder-rights-and-minority-protection"]
-tags: ["SAMR", "registration archives", "public records", "evidence"]
+tags: ["SAMR", "registration archives", "public records", "evidence", "shareholder status"]
 ---
 
 ## Use It For
