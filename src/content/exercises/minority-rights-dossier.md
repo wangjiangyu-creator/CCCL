@@ -2,7 +2,7 @@
 title: "Minority Rights Dossier"
 topicSlug: "shareholder-rights-and-minority-protection"
 difficulty: "intermediate"
-linkedResources: ["prc-company-law-2023", "prc-company-law-interpretation-iv-2017", "guiding-case-8-lin-fangqing-dissolution", "foss-v-harbottle-proper-plaintiff"]
+linkedResources: ["prc-company-law-2023", "prc-company-law-interpretation-iv-2017", "prc-company-law-interpretation-v-2020", "li-shujun-jiangsu-jiade-information-rights", "modern-avenue-shareholder-derivative-fund-occupation", "guiding-case-8-lin-fangqing-dissolution", "foss-v-harbottle-proper-plaintiff"]
 ---
 
 ## Facts
