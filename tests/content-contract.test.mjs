@@ -606,15 +606,15 @@ test("materials page exposes five curated source-linked document groups", async 
     return [...materialsData.slice(start, end).matchAll(/\n\s+\{\n\s+company:/g)].length;
   };
 
-  assert.equal(entryCount("articlesOfAssociation", "ipoProspectuses"), 10, "expected ten articles of association records");
-  assert.equal(entryCount("ipoProspectuses", "csrReports"), 10, "expected ten IPO prospectus records");
-  assert.equal(entryCount("csrReports", "esgReports"), 10, "expected ten CSR report records");
-  assert.equal(entryCount("esgReports", "annualFinancialReports"), 10, "expected ten ESG report records");
-  assert.equal(entryCount("annualFinancialReports"), 10, "expected ten annual financial report records");
+  assert.equal(entryCount("articlesOfAssociation", "ipoProspectuses"), 20, "expected twenty articles of association records");
+  assert.equal(entryCount("ipoProspectuses", "csrReports"), 20, "expected twenty IPO prospectus records");
+  assert.equal(entryCount("csrReports", "esgReports"), 20, "expected twenty CSR report records");
+  assert.equal(entryCount("esgReports", "annualFinancialReports"), 20, "expected twenty ESG report records");
+  assert.equal(entryCount("annualFinancialReports"), 20, "expected twenty annual financial report records");
 
   assert.ok(materialsPage.includes("Source-linked company materials"), "materials page needs a clear hero");
   assert.ok(materialsPage.includes("data-filter-card"), "materials page should support client-side filtering");
-  assert.ok(materialsPage.includes("10 records"), "materials page should show ten-record group counts");
+  assert.ok(materialsPage.includes("group.records.length"), "materials page should show dynamic group counts");
 });
 
 test("home page exposes syllabus overview and learning outcomes", async () => {
