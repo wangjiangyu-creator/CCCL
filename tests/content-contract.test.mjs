@@ -5,6 +5,9 @@ import { test } from "node:test";
 
 const root = new URL("..", import.meta.url);
 const contentRoot = new URL("src/content/", root);
+const pagesRoot = new URL("src/pages/", root);
+const creationStatement =
+  "This website was created by Professor Wang Jiangyu of City University of Hong Kong School of Law with Codex for his teaching and research only.";
 
 const requiredTopicSections = [
   "## Introduction",
@@ -78,6 +81,23 @@ const readCollection = async (name) => {
     })
   );
 };
+
+const readAstroPages = async (dir = pagesRoot) => {
+  const entries = await readdir(dir, { withFileTypes: true });
+  const pages = await Promise.all(
+    entries.map(async (entry) => {
+      const child = new URL(`${entry.name}${entry.isDirectory() ? "/" : ""}`, dir);
+      if (entry.isDirectory()) return readAstroPages(child);
+      if (entry.name.endsWith(".astro")) return [child];
+      return [];
+    })
+  );
+
+  return pages.flat();
+};
+
+const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const whitespaceRegExp = (value) => value.trim().split(/\s+/).map(escapeRegExp).join("\\s+");
 
 test("course topic pages cover the ten LW6134 teaching units", async () => {
   const topics = await readCollection("topics");
@@ -572,6 +592,30 @@ test("home page exposes a seminar-prep entry point", async () => {
     "/exercise/"
   ]) {
     assert.ok(home.includes(phrase), `home page missing study-prep phrase ${phrase}`);
+  }
+});
+
+test("site credits Professor Wang Jiangyu and Codex on the home page and shared footer", async () => {
+  const home = await readFile(new URL("src/pages/index.astro", root), "utf8");
+  const baseLayout = await readFile(new URL("src/layouts/BaseLayout.astro", root), "utf8");
+  const statementPattern = whitespaceRegExp(creationStatement);
+
+  assert.match(
+    home,
+    new RegExp(
+      `<h1 class="page-title">Chinese and Comparative Company Law</h1>\\s*<p class="creation-note">\\s*${statementPattern}\\s*</p>`
+    ),
+    "home page should show the creation statement directly under the main title"
+  );
+  assert.match(
+    baseLayout,
+    new RegExp(`<footer class="site-footer">[\\s\\S]*${statementPattern}[\\s\\S]*</footer>`),
+    "shared footer should include the creation statement"
+  );
+
+  for (const pageUrl of await readAstroPages()) {
+    const page = await readFile(pageUrl, "utf8");
+    assert.ok(page.includes("<BaseLayout"), `${pageUrl.pathname} should render through the shared footer layout`);
   }
 });
 
