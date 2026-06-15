@@ -10,7 +10,7 @@ status: "Current exchange rule"
 sourceUrl: "https://www.szse.cn/lawrules/rule/stock/supervision/currency/t20240412_606839.html"
 translationStatus: "unavailable"
 summary: "SZSE sustainability-reporting guideline for main-board and ChiNext listed companies, including sustainability governance, environmental and social topics, and disclosure mechanics."
-topics: ["listed-companies-securities-and-disclosure", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
+topics: ["business-forms-and-personality", "listed-companies-securities-and-disclosure", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
 tags: ["Shenzhen Stock Exchange", "sustainability report", "ESG", "information disclosure", "listed companies"]
 ---
 

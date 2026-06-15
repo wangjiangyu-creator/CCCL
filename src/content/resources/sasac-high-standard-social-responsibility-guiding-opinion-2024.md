@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://www.gov.cn/zhengce/zhengceku/202406/content_6955457.htm"
 translationStatus: "unavailable"
 summary: "SASAC guidance requiring central enterprises to integrate social responsibility into operations, governance, ESG practice, overseas operations, stakeholder communication, supervision, and assessment."
-topics: ["state-owned-and-foreign-invested-companies", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
+topics: ["business-forms-and-personality", "state-owned-and-foreign-invested-companies", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
 tags: ["SASAC", "CSR", "ESG", "central enterprises", "social responsibility"]
 ---
 

@@ -10,7 +10,7 @@ status: "Current, as amended"
 sourceUrl: "https://www.gesetze-im-internet.de/englisch_aktg/"
 translationStatus: "official"
 summary: "Germany's core statute for stock corporations, two-tier boards, supervisory-board oversight, shareholder powers, affiliated-enterprise rules, control agreements, and group-law creditor protection."
-topics: ["corporate-organs-and-governance", "directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection", "veil-piercing-groups-and-creditors", "listed-companies-securities-and-disclosure"]
+topics: ["business-forms-and-personality", "corporate-organs-and-governance", "directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection", "veil-piercing-groups-and-creditors", "listed-companies-securities-and-disclosure"]
 tags: ["Germany", "AktG", "stock corporation", "two-tier board", "Konzernrecht", "corporate groups"]
 ---
 

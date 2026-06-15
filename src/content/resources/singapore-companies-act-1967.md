@@ -9,7 +9,7 @@ status: "Current consolidated legislation"
 sourceUrl: "https://sso.agc.gov.sg/Act/CoA1967"
 translationStatus: "not-needed"
 summary: "Singapore's principal companies legislation, covering incorporation, management, shares, accounts, registers, director duties, and winding up."
-topics: ["formation-registration-and-articles", "corporate-organs-and-governance", "directors-officers-and-controller-duties", "veil-piercing-groups-and-creditors", "distress-dissolution-and-liquidation"]
+topics: ["business-forms-and-personality", "formation-registration-and-articles", "corporate-organs-and-governance", "directors-officers-and-controller-duties", "veil-piercing-groups-and-creditors", "distress-dissolution-and-liquidation"]
 tags: ["Singapore", "Companies Act", "comparative law", "registration"]
 ---
 

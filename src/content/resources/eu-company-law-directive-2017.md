@@ -9,7 +9,7 @@ status: "Current, as amended"
 sourceUrl: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017L1132"
 translationStatus: "not-needed"
 summary: "Codified EU company-law directive containing rules on disclosure, incorporation, nullity, capital maintenance, capital alteration, mergers, and divisions."
-topics: ["capital-contributions-and-shareholder-finance", "formation-registration-and-articles", "comparative-law"]
+topics: ["business-forms-and-personality", "capital-contributions-and-shareholder-finance", "formation-registration-and-articles", "comparative-law"]
 tags: ["EU company law", "legal capital", "capital maintenance", "disclosure", "comparative law"]
 ---
 

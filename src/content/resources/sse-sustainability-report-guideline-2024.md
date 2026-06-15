@@ -10,7 +10,7 @@ status: "Current exchange rule"
 sourceUrl: "https://www.sse.com.cn/lawandrules/sselawsrules2025/stocks/mainipo/c/c_20250516_10779150.shtml"
 translationStatus: "unavailable"
 summary: "SSE sustainability-reporting guideline for main-board and STAR Market listed companies, covering governance, environmental, social, innovation, and disclosure-quality topics."
-topics: ["listed-companies-securities-and-disclosure", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
+topics: ["business-forms-and-personality", "listed-companies-securities-and-disclosure", "corporate-organs-and-governance", "directors-officers-and-controller-duties"]
 tags: ["Shanghai Stock Exchange", "sustainability report", "ESG", "information disclosure", "listed companies"]
 ---
 
