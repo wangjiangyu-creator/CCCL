@@ -10,7 +10,7 @@ sourceUrl: "https://vlex.hk/vid/moulin-global-eyecare-holdings-862780997"
 originalDecisionUrl: "https://vlex.hk/vid/moulin-global-eyecare-holdings-862780997"
 translationStatus: "not-needed"
 summary: "Hong Kong Court of Final Appeal decision on claims against directors of an insolvent listed group, including creditor-interest duties and loss caused by improper distributions or redemptions."
-topics: ["directors-officers-and-controller-duties", "distress-dissolution-and-liquidation", "listed-companies-securities-and-disclosure"]
+topics: ["directors-officers-and-controller-duties", "veil-piercing-groups-and-creditors", "distress-dissolution-and-liquidation", "listed-companies-securities-and-disclosure"]
 tags: ["Hong Kong", "directors duties", "creditor interests", "insolvent company", "listed company"]
 ---
 

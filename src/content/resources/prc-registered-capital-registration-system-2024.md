@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://www.gov.cn/zhengce/zhengceku/202407/content_6960377.htm"
 translationStatus: "unavailable"
 summary: "Implements the 2023 Company Law's registered-capital discipline, including transition rules for pre-existing companies with long contribution periods and SAMR scrutiny of abnormal capital arrangements."
-topics: ["capital-contributions-and-shareholder-finance", "formation-registration-and-articles", "listed-companies-securities-and-disclosure"]
+topics: ["capital-contributions-and-shareholder-finance", "formation-registration-and-articles", "veil-piercing-groups-and-creditors", "listed-companies-securities-and-disclosure"]
 tags: ["registered capital", "contribution period", "transition", "SAMR", "2024"]
 ---
 
@@ -21,4 +21,3 @@ Use this with Article 47 of the revised Company Law for contribution-period prob
 ## Teaching Notes
 
 This is one of the most important post-revision implementing instruments. It moves capital rules from doctrine into registration administration.
-

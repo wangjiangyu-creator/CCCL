@@ -9,7 +9,7 @@ status: "Current consolidated legislation"
 sourceUrl: "https://www.legislation.gov.uk/ukpga/2006/46/contents"
 translationStatus: "not-needed"
 summary: "The UK's principal company statute, including incorporation, constitutional documents, company capacity, accounts, directors' duties, derivative claims, and member remedies."
-topics: ["business-forms-and-personality", "formation-registration-and-articles", "corporate-organs-and-governance", "directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection"]
+topics: ["business-forms-and-personality", "formation-registration-and-articles", "corporate-organs-and-governance", "directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection", "veil-piercing-groups-and-creditors"]
 tags: ["United Kingdom", "incorporation", "articles of association", "directors duties", "derivative claims", "comparative law"]
 ---
 
