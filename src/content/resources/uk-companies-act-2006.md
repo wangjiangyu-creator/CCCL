@@ -8,14 +8,14 @@ date: "2006-11-08"
 status: "Current consolidated legislation"
 sourceUrl: "https://www.legislation.gov.uk/ukpga/2006/46/contents"
 translationStatus: "not-needed"
-summary: "The UK's principal company statute, including incorporation, constitutional documents, company capacity, accounts, directors' duties, derivative claims, and member remedies."
-topics: ["business-forms-and-personality", "formation-registration-and-articles", "corporate-organs-and-governance", "directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection", "veil-piercing-groups-and-creditors"]
-tags: ["United Kingdom", "incorporation", "articles of association", "directors duties", "derivative claims", "comparative law"]
+summary: "The UK's principal company statute, including incorporation, constitutional documents, share capital, allotment authority, distributions, company capacity, accounts, directors' duties, derivative claims, and member remedies."
+topics: ["business-forms-and-personality", "formation-registration-and-articles", "capital-contributions-and-shareholder-finance", "corporate-organs-and-governance", "directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection", "veil-piercing-groups-and-creditors"]
+tags: ["United Kingdom", "incorporation", "articles of association", "share capital", "allotment authority", "distributions", "directors duties", "derivative claims", "comparative law"]
 ---
 
 ## Use It For
 
-Use this to compare incorporation, articles, statutory limits on ultra vires, codified directors' duties, and derivative-claim screening with Chinese and Delaware approaches.
+Use this to compare incorporation, articles, share allotment, capital maintenance, statutory limits on ultra vires, codified directors' duties, and derivative-claim screening with Chinese and Delaware approaches.
 
 ## Teaching Notes
 
