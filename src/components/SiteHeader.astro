@@ -1,6 +1,9 @@
 ---
 import { navigation } from "@data/navigation";
 import { withBase } from "@lib/paths";
+
+const normalizePath = (path: string) => (path.endsWith("/") ? path : `${path}/`);
+const currentPath = normalizePath(Astro.url.pathname);
 ---
 
 <header class="site-header">
@@ -11,7 +14,21 @@ import { withBase } from "@lib/paths";
       <strong>Chinese and Comparative Company Law</strong>
     </a>
     <nav class="site-nav" aria-label="Primary navigation">
-      {navigation.map((item) => <a href={withBase(item.href)}>{item.label}</a>)}
+      {
+        navigation.map((item) => {
+          const href = withBase(item.href);
+          const active = currentPath.startsWith(normalizePath(href));
+          return (
+            <a
+              href={href}
+              class:list={{ "is-active": active }}
+              aria-current={active ? "page" : undefined}
+            >
+              {item.label}
+            </a>
+          );
+        })
+      }
     </nav>
   </div>
 </header>
