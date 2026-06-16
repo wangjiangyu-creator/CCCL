@@ -10,7 +10,7 @@ status: "Reference model act"
 sourceUrl: "https://www.americanbar.org/groups/business_law/resources/model-business-corporation-act/"
 translationStatus: "not-needed"
 summary: "The leading template for U.S. state corporation statutes, useful for comparing formation, board powers, shareholder meetings, and derivative enforcement."
-topics: ["formation-registration-and-articles", "corporate-organs-and-governance", "shareholder-rights-and-minority-protection"]
+topics: ["formation-registration-and-articles", "corporate-organs-and-governance", "shareholder-rights-and-minority-protection", "distress-dissolution-and-liquidation"]
 tags: ["United States", "MBCA", "model act", "comparative law"]
 ---
 

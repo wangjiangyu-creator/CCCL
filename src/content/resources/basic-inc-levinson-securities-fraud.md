@@ -10,7 +10,7 @@ sourceUrl: "https://tile.loc.gov/storage-services/service/ll/usrep/usrep485/usre
 originalDecisionUrl: "https://tile.loc.gov/storage-services/service/ll/usrep/usrep485/usrep485224/usrep485224.pdf"
 translationStatus: "unavailable"
 summary: "Leading U.S. securities-fraud case adopting a probability-magnitude approach to merger-negotiation materiality and recognizing fraud-on-the-market reliance for open-market Rule 10b-5 claims."
-topics: ["listed-companies-securities-and-disclosure", "shareholder-rights-and-minority-protection"]
+topics: ["listed-companies-securities-and-disclosure", "shareholder-rights-and-minority-protection", "distress-dissolution-and-liquidation"]
 tags: ["United States", "Supreme Court", "Rule 10b-5", "materiality", "fraud-on-the-market", "merger disclosure"]
 ---
 

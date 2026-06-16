@@ -10,7 +10,7 @@ sourceUrl: "https://law.justia.com/cases/delaware/supreme-court/1985/488-a-2d-85
 originalDecisionUrl: "https://law.justia.com/cases/delaware/supreme-court/1985/488-a-2d-858-4.html"
 translationStatus: "not-needed"
 summary: "A Delaware duty-of-care case focused on whether directors adequately informed themselves before approving a merger."
-topics: ["directors-officers-and-controller-duties", "listed-companies-securities-and-disclosure"]
+topics: ["directors-officers-and-controller-duties", "listed-companies-securities-and-disclosure", "distress-dissolution-and-liquidation"]
 tags: ["duty of care", "mergers", "board process", "Delaware"]
 ---
 

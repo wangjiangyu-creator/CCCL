@@ -10,7 +10,7 @@ sourceUrl: "https://law.justia.com/cases/delaware/supreme-court/1986/506-a-2d-17
 originalDecisionUrl: "https://law.justia.com/cases/delaware/supreme-court/1986/506-a-2d-173-1.html"
 translationStatus: "not-needed"
 summary: "Leading Delaware decision on directors' duties when a company enters sale-of-control mode and board discretion shifts toward maximizing value for shareholders."
-topics: ["directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection", "listed-companies-securities-and-disclosure"]
+topics: ["directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection", "listed-companies-securities-and-disclosure", "distress-dissolution-and-liquidation"]
 tags: ["Delaware", "takeovers", "Revlon duties", "board duties", "sale of control"]
 ---
 

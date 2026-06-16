@@ -20,4 +20,3 @@ Use this with Hong Kong, Singapore, and Chinese minority-remedy materials to com
 ## Teaching Notes
 
 The case is good for testing whether students can identify the source of the alleged expectation rather than assuming disappointment equals unfairness.
-

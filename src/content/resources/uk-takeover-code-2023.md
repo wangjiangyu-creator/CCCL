@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://code.thetakeoverpanel.org.uk/code.pdf"
 translationStatus: "not-needed"
 summary: "The UK's core takeover regime, emphasizing equal treatment, open procedure, and board limits during control transactions."
-topics: ["shareholder-rights-and-minority-protection", "listed-companies-securities-and-disclosure", "state-owned-and-foreign-invested-companies"]
+topics: ["shareholder-rights-and-minority-protection", "listed-companies-securities-and-disclosure", "state-owned-and-foreign-invested-companies", "distress-dissolution-and-liquidation"]
 tags: ["United Kingdom", "takeovers", "control transactions", "comparative law"]
 ---
 

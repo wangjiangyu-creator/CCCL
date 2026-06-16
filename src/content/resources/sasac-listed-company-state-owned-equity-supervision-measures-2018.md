@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://www.gov.cn/zhengce/2022-01/12/content_5718611.htm"
 translationStatus: "unavailable"
 summary: "Joint rules governing changes in state-owned shareholdings of listed companies, including transfers, acquisitions, subscriptions, asset restructurings, and approval or filing procedures."
-topics: ["state-owned-and-foreign-invested-companies", "listed-companies-securities-and-disclosure", "shareholder-rights-and-minority-protection"]
+topics: ["state-owned-and-foreign-invested-companies", "listed-companies-securities-and-disclosure", "shareholder-rights-and-minority-protection", "distress-dissolution-and-liquidation"]
 tags: ["SASAC", "MOF", "CSRC", "listed companies", "state-owned shares"]
 ---
 

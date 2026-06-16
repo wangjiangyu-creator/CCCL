@@ -367,7 +367,7 @@ test("Unit 6 has deep shareholder status, rights, transfer, and minority-protect
     "csrc-cash-dividend-guideline-2023",
     "csrc-share-reduction-measures-2024",
     "csrc-share-repurchase-rules-2023",
-    "csrc-takeover-measures-2020",
+    "csrc-takeover-measures-2025",
     "csrc-sse-stock-listing-rules-2025",
     "csrc-szse-stock-listing-rules-2025",
     "csrc-bse-stock-listing-rules-2025",

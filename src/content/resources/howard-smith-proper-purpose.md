@@ -9,7 +9,7 @@ status: "Leading directors' proper-purpose case"
 sourceUrl: "https://lawprof.co/company/director-duties-cases/howard-smith-ltd-v-ampol-petroleum-1974-ac-821/"
 translationStatus: "not-needed"
 summary: "Leading proper-purpose authority holding that directors may not use share-issue powers primarily to alter control in a takeover contest."
-topics: ["directors-officers-and-controller-duties", "corporate-organs-and-governance", "listed-companies-securities-and-disclosure"]
+topics: ["directors-officers-and-controller-duties", "corporate-organs-and-governance", "listed-companies-securities-and-disclosure", "distress-dissolution-and-liquidation"]
 tags: ["United Kingdom", "proper purpose", "share issue", "takeovers", "board powers"]
 ---
 
@@ -20,4 +20,3 @@ Use this with Unocal and Revlon to compare UK proper-purpose doctrine with Delaw
 ## Teaching Notes
 
 The case helps keep three questions separate: whether directors acted honestly, whether they used a real power, and whether they used it for the proper purpose.
-

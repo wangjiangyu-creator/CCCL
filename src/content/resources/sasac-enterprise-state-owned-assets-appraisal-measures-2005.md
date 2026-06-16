@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://www.sasac.gov.cn/n2588035/n22302962/n22302967/c22704986/content.html"
 translationStatus: "unavailable"
 summary: "SASAC rules on enterprise state-owned asset appraisal for restructuring, non-cash contributions, mergers, divisions, non-listed state-owned equity-ratio changes, transfers, and other valuation-triggering transactions."
-topics: ["state-owned-and-foreign-invested-companies", "capital-contributions-and-shareholder-finance", "shareholder-rights-and-minority-protection"]
+topics: ["state-owned-and-foreign-invested-companies", "capital-contributions-and-shareholder-finance", "shareholder-rights-and-minority-protection", "distress-dissolution-and-liquidation"]
 tags: ["SASAC", "asset appraisal", "state-owned assets", "valuation", "equity transfer"]
 ---
 

@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://www.csrc.gov.cn/csrc/c101953/c7547359/content.shtml"
 translationStatus: "unavailable"
 summary: "Current CSRC rules on periodic reports, interim reports, disclosure obligations, directors' and officers' responsibilities, service-provider duties, supervision, and legal liability."
-topics: ["directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection", "listed-companies-securities-and-disclosure"]
+topics: ["directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection", "listed-companies-securities-and-disclosure", "distress-dissolution-and-liquidation"]
 tags: ["information disclosure", "listed companies", "CSRC", "securities", "directors"]
 ---
 

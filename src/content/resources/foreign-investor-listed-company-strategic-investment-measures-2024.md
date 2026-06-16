@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://www.gov.cn/zhengce/zhengceku/202411/content_6984524.htm"
 translationStatus: "unavailable"
 summary: "Joint rules for foreign investors' strategic investments in A-share listed companies through private placement, agreement transfer, tender offer, and other statutory routes."
-topics: ["state-owned-and-foreign-invested-companies", "listed-companies-securities-and-disclosure", "shareholder-rights-and-minority-protection"]
+topics: ["state-owned-and-foreign-invested-companies", "listed-companies-securities-and-disclosure", "shareholder-rights-and-minority-protection", "distress-dissolution-and-liquidation"]
 tags: ["foreign investors", "listed companies", "strategic investment", "MOFCOM", "CSRC"]
 ---
 

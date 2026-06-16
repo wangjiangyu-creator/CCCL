@@ -11,7 +11,7 @@ sourceUrl: "https://gongbao.court.gov.cn/Details/a513de1b6f818d4508e3930c46ee83.
 originalDecisionUrl: "https://gongbao.court.gov.cn/Details/a513de1b6f818d4508e3930c46ee83.html"
 translationStatus: "unavailable"
 summary: "A Gazette equity-transfer case distinguishing the transfer of company shares from the transfer of the underlying mining right held by the company."
-topics: ["business-forms-and-personality", "formation-registration-and-articles", "shareholder-rights-and-minority-protection"]
+topics: ["business-forms-and-personality", "formation-registration-and-articles", "shareholder-rights-and-minority-protection", "distress-dissolution-and-liquidation"]
 tags: ["SPC Gazette", "equity transfer", "company assets", "mining rights", "separate personality"]
 ---
 

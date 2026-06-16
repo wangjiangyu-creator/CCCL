@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://www.csrc.gov.cn/csrc/c101954/c7547807/7547807/files/%E9%99%84%E4%BB%B61.%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E8%82%A1%E4%B8%9C%E4%BC%9A%E8%A7%84%E5%88%99.pdf"
 translationStatus: "unavailable"
 summary: "CSRC rules on convening, proposals, voting, online participation, and disclosure for listed-company shareholders' meetings."
-topics: ["corporate-organs-and-governance", "shareholder-rights-and-minority-protection", "listed-companies-securities-and-disclosure"]
+topics: ["corporate-organs-and-governance", "shareholder-rights-and-minority-protection", "listed-companies-securities-and-disclosure", "distress-dissolution-and-liquidation"]
 tags: ["CSRC", "listed companies", "shareholders meeting", "voting"]
 ---
 

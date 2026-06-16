@@ -9,7 +9,7 @@ status: "Book"
 sourceUrl: "https://hls.harvard.edu/bibliography/the-anatomy-of-corporate-law-a-comparative-and-functional-approach/"
 translationStatus: "not-needed"
 summary: "Comparative and functional account of corporate law built around legal personality, limited liability, transferable shares, delegated management, investor ownership, and agency problems."
-topics: ["business-forms-and-personality", "corporate-organs-and-governance", "directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection", "veil-piercing-groups-and-creditors", "listed-companies-securities-and-disclosure"]
+topics: ["business-forms-and-personality", "corporate-organs-and-governance", "directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection", "veil-piercing-groups-and-creditors", "listed-companies-securities-and-disclosure", "distress-dissolution-and-liquidation"]
 tags: ["comparative law", "corporate personality", "limited liability", "agency costs", "company purpose", "book"]
 ---
 

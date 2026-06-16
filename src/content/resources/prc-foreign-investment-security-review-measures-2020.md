@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://www.gov.cn/zhengce/2020-12/19/content_5712376.htm"
 translationStatus: "unavailable"
 summary: "Rules for national-security review of foreign investments in military, important agriculture, energy, infrastructure, transport, cultural products, information technology, internet products, financial services, and key technologies."
-topics: ["state-owned-and-foreign-invested-companies", "listed-companies-securities-and-disclosure"]
+topics: ["state-owned-and-foreign-invested-companies", "listed-companies-securities-and-disclosure", "distress-dissolution-and-liquidation"]
 tags: ["foreign investment", "security review", "national security", "NDRC", "MOFCOM"]
 ---
 
@@ -21,4 +21,3 @@ Use this when an investment structure is formally permitted but may still raise 
 ## Teaching Notes
 
 Foreign-investment analysis often has three layers: company-law validity, market-access permission, and security review.
-

@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://wap.sasac.gov.cn/n2588030/c32955553/content.html"
 translationStatus: "unavailable"
 summary: "SASAC operating rules for enterprise state-owned asset transactions through property-exchange institutions, including equity transfers, capital increases, asset transfers, announcements, bidding, and contracts."
-topics: ["state-owned-and-foreign-invested-companies", "capital-contributions-and-shareholder-finance", "shareholder-rights-and-minority-protection"]
+topics: ["state-owned-and-foreign-invested-companies", "capital-contributions-and-shareholder-finance", "shareholder-rights-and-minority-protection", "distress-dissolution-and-liquidation"]
 tags: ["SASAC", "state-owned assets", "property exchange", "capital increase", "equity transfer"]
 ---
 

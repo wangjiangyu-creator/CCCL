@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://www.sfc.hk/en/Rules-and-standards/Codes-and-guidelines/Codes/The-Codes-on-Takeovers-and-Mergers-and-Share-Buy-backs"
 translationStatus: "not-needed"
 summary: "Hong Kong's takeover and share-buyback codes, focusing on equal treatment of shareholders and orderly control transactions."
-topics: ["shareholder-rights-and-minority-protection", "listed-companies-securities-and-disclosure", "state-owned-and-foreign-invested-companies"]
+topics: ["shareholder-rights-and-minority-protection", "listed-companies-securities-and-disclosure", "state-owned-and-foreign-invested-companies", "distress-dissolution-and-liquidation"]
 tags: ["Hong Kong", "takeovers", "share buybacks", "SFC"]
 ---
 

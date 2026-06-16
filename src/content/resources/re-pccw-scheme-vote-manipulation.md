@@ -10,7 +10,7 @@ sourceUrl: "https://vlex.hk/vid/re-pccw-ltd-862793397"
 originalDecisionUrl: "https://vlex.hk/vid/re-pccw-ltd-862793397"
 translationStatus: "not-needed"
 summary: "Hong Kong Court of Appeal decision refusing to sanction a privatization scheme where share-splitting and vote manipulation affected the shareholder meeting result."
-topics: ["listed-companies-securities-and-disclosure", "shareholder-rights-and-minority-protection", "corporate-organs-and-governance"]
+topics: ["listed-companies-securities-and-disclosure", "shareholder-rights-and-minority-protection", "corporate-organs-and-governance", "distress-dissolution-and-liquidation"]
 tags: ["Hong Kong", "scheme of arrangement", "privatization", "vote manipulation", "shareholder meeting"]
 ---
 
@@ -21,4 +21,3 @@ Use this with Delaware takeover cases and Chinese listed-company meeting rules t
 ## Teaching Notes
 
 The case is a vivid example of why formal voting thresholds do not guarantee substantive legitimacy if the voting base has been engineered.
-

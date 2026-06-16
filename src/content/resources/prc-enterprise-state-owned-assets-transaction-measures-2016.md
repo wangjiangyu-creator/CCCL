@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://www.gov.cn/gongbao/content/2016/content_5115848.htm"
 translationStatus: "unavailable"
 summary: "Rules governing transfers of enterprise state-owned equity, capital increases, and major asset transfers, including public exchange requirements, approval authority, information disclosure, and supervision."
-topics: ["capital-contributions-and-shareholder-finance", "directors-officers-and-controller-duties", "state-owned-and-foreign-invested-companies"]
+topics: ["capital-contributions-and-shareholder-finance", "directors-officers-and-controller-duties", "state-owned-and-foreign-invested-companies", "distress-dissolution-and-liquidation"]
 tags: ["state-owned assets", "SASAC", "asset transactions", "equity transfer", "capital increase"]
 ---
 
@@ -21,4 +21,3 @@ Use this when a state-invested company sells assets, transfers equity, or raises
 ## Teaching Notes
 
 The transaction rules show why conflicts in state-invested companies may involve public-asset preservation as well as private-law duties.
-

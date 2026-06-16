@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://www.npc.gov.cn/englishnpc/c2759/c23934/202109/t20210914_384349.html"
 translationStatus: "official"
 summary: "The central securities statute for public offerings, trading, disclosure, investor protection, intermediaries, securities exchanges, supervision, and civil liability."
-topics: ["listed-companies-securities-and-disclosure", "shareholder-rights-and-minority-protection"]
+topics: ["listed-companies-securities-and-disclosure", "shareholder-rights-and-minority-protection", "distress-dissolution-and-liquidation"]
 tags: ["securities", "disclosure", "listed companies", "investor protection"]
 ---
 
@@ -21,4 +21,3 @@ Pair this with listed-company chapters of the Company Law when a problem shifts 
 ## Teaching Notes
 
 The Securities Law is an essential reminder that public company governance is not only corporate law; it is also market regulation.
-

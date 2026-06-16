@@ -10,7 +10,7 @@ sourceUrl: "https://law.justia.com/cases/delaware/supreme-court/1985/493-a-2d-94
 originalDecisionUrl: "https://law.justia.com/cases/delaware/supreme-court/1985/493-a-2d-946-9.html"
 translationStatus: "not-needed"
 summary: "Delaware Supreme Court decision creating enhanced review for takeover defensive measures, requiring directors to identify a threat and adopt a proportionate response."
-topics: ["directors-officers-and-controller-duties", "listed-companies-securities-and-disclosure", "shareholder-rights-and-minority-protection"]
+topics: ["directors-officers-and-controller-duties", "listed-companies-securities-and-disclosure", "shareholder-rights-and-minority-protection", "distress-dissolution-and-liquidation"]
 tags: ["Delaware", "takeovers", "defensive measures", "enhanced scrutiny", "board duties"]
 ---
 
@@ -21,4 +21,3 @@ Use this alongside Revlon to distinguish defensive-board review from sale-of-con
 ## Teaching Notes
 
 Unocal helps students see why hostile-takeover law is neither ordinary business judgment nor full entire-fairness review.
-

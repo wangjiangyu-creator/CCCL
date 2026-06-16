@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://www.gov.cn/zhengce/202305/content_6858355.htm"
 translationStatus: "unavailable"
 summary: "SAMR rules on merger-control filings, review procedure, investigation of unlawful concentrations, confidentiality, remedies, and legal liability."
-topics: ["state-owned-and-foreign-invested-companies", "corporate-organs-and-governance", "shareholder-rights-and-minority-protection"]
+topics: ["state-owned-and-foreign-invested-companies", "corporate-organs-and-governance", "shareholder-rights-and-minority-protection", "distress-dissolution-and-liquidation"]
 tags: ["SAMR", "merger control", "M&A", "operator concentration"]
 ---
 
