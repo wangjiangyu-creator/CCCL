@@ -4,6 +4,8 @@
 
 Build Special Unit 1 as a separate teaching page titled **Private Equity: 中国与比较法上的私募和资管制度** and link it from the Topics page. The page should use web-searched, verifiable information and the user's provided framework to teach private funds and asset management from Chinese company, partnership, securities, trust, financial-regulatory, case-law, and comparative-law perspectives.
 
+The page should be bilingual in a functional teaching sense: English titles, headings, legal terms, rules, and case names appear first, followed by the relevant Chinese characters or official Chinese title where useful. It should not become a full parallel translation. The goal is to help students connect English analytical vocabulary with Chinese legal terminology.
+
 ## Scope
 
 The work covers one new special-unit page, the Topics-page link, and the resource records needed for legislation, cases, readings, and comparative materials. It does not create pages for the other special units.
@@ -34,6 +36,8 @@ The page will organize the subject as follows:
 - Comparative law: U.S. private offerings and private fund exemptions, U.S. private fund adviser regulation, UK limited partnerships and PFLP, UK/EU AIFM regulation, and Cayman private funds.
 - Teaching tools: tables for organization forms, regulatory layers, case themes, and a fund-formation checklist.
 
+Terminology should follow this style: private equity (私募股权), private fund (私募基金), asset management (资产管理/资管), qualified investor (合格投资者), non-public fundraising (非公开募集), manager registration (管理人登记), product filing (基金备案/产品备案), rigid redemption (刚性兑付), channel business (通道业务), suitability duty (适当性义务), fiduciary duty (信义义务), and fund property independence (基金财产独立).
+
 ## Source Verification
 
 Use primary or stable sources where available. Verified source anchors include:
@@ -60,6 +64,8 @@ Reuse existing records where they already exist. Add new records only where need
 - Any verified case not already represented in the course resources.
 
 Each new resource must include source URL, jurisdiction, kind, date or citation where available, topic tags, and a short teaching summary.
+
+Where a resource has an official Chinese title, the resource card and the page discussion should present the English title followed by the Chinese original title. Case discussions should follow the same pattern unless the case is better known by a short Chinese reference, such as Haifu/Shiheng (海富/世恒).
 
 ## Testing
 
