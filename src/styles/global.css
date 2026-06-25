@@ -438,6 +438,10 @@ select:focus-visible {
   gap: 18px;
 }
 
+.topic-section + .topic-section {
+  margin-top: 42px;
+}
+
 .card,
 .resource-card,
 .topic-card,
@@ -481,6 +485,16 @@ select:focus-visible {
 .topic-card h2,
 .exercise-card h2 {
   font-size: 1.18rem;
+}
+
+.topic-card--special {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(247, 250, 248, 0.9)
+    ),
+    var(--surface);
 }
 
 .topic-card p,

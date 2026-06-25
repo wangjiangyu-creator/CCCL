@@ -5,6 +5,8 @@ const topicCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     order: z.number(),
+    unitType: z.enum(["regular", "special"]).default("regular"),
+    specialOrder: z.number().optional(),
     summary: z.string(),
     legislationIds: z.array(z.string()),
     caseIds: z.array(z.string()),

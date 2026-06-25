@@ -10,7 +10,7 @@ status: "Provincial high court retrial decision"
 sourceUrl: "https://www.glo.com.cn/Content/2019/12-23/1846111464.html"
 translationStatus: "unavailable"
 summary: "Widely cited post-Haifu valuation-adjustment case recognizing the validity of a target-company share-repurchase undertaking while tying performance to statutory capital and repurchase procedures."
-topics: ["shareholder-rights-and-minority-protection", "capital-contributions-and-shareholder-finance", "distress-dissolution-and-liquidation"]
+topics: ["shareholder-rights-and-minority-protection", "capital-contributions-and-shareholder-finance", "distress-dissolution-and-liquidation", "private-equity-china-comparative-law"]
 tags: ["valuation adjustment mechanism", "VAM", "share repurchase", "capital maintenance", "private equity"]
 ---
 

@@ -1,11 +1,52 @@
 ---
 import ResourceFilter from "@components/ResourceFilter.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
-import { byTopicOrder, contentSlug } from "@lib/collections";
+import { bySpecialTopicOrder, byTopicOrder, contentSlug, isSpecialTopic } from "@lib/collections";
 import { withBase } from "@lib/paths";
 import { getCollection } from "astro:content";
 
-const topics = (await getCollection("topics")).sort(byTopicOrder);
+const allTopics = await getCollection("topics");
+const topics = allTopics.filter((topic) => !isSpecialTopic(topic)).sort(byTopicOrder);
+const specialTopics = allTopics.filter(isSpecialTopic).sort(bySpecialTopicOrder);
+
+const futureSpecialUnits = [
+  {
+    title: "Political Logic of Company Law and Corporate Governance in China",
+    summary: "How state capacity, party-state organization, industrial policy, and market ordering shape corporate law institutions."
+  },
+  {
+    title: "Comparative Piercing Corporate Veil",
+    summary: "Veil-piercing doctrines across China, common-law systems, and civil-law systems, with attention to groups and creditors."
+  },
+  {
+    title: "Comparative Corporate Representation",
+    summary: "Legal representative authority, apparent authority, board authorization, ultra vires risk, and third-party reliance."
+  },
+  {
+    title: "VIE and Its Future",
+    summary: "Variable interest entity structures, foreign-investment controls, listing practice, platform regulation, and reform options."
+  },
+  {
+    title: "VAM 对赌协议",
+    summary: "Valuation-adjustment mechanisms, enforceability, investor remedies, target-company liability, and financing practice."
+  },
+  {
+    title: "Related Party Transactions",
+    summary: "Conflict transactions, controller duties, disclosure, approval procedures, fairness review, and remedies."
+  },
+  {
+    title: "Takeover of Listed Companies",
+    summary: "Mandatory offers, disclosure thresholds, control transfers, defensive measures, and comparative takeover regulation."
+  },
+  {
+    title: "IPO Regime in China",
+    summary: "Registration-based public offering review, exchange listing standards, sponsor duties, disclosure liability, and delisting links."
+  },
+  {
+    title: "Cross-Border Insolvency",
+    summary: "Recognition, cooperation, enterprise groups, creditor coordination, and the interaction between bankruptcy and corporate law."
+  }
+];
 ---
 
 <BaseLayout title="Topics" description="LW6134 teaching units for Chinese and Comparative Company Law.">
@@ -14,8 +55,9 @@ const topics = (await getCollection("topics")).sort(byTopicOrder);
       <p class="eyebrow">Course map</p>
       <h1 class="page-title">Topics</h1>
       <p class="lede">
-        Ten linked units from business forms and corporate personality through
-        listed-company regulation, state-invested companies, and liquidation.
+        Regular teaching units from business forms and corporate personality
+        through listed-company regulation, state-invested companies, and
+        liquidation, followed by special units for advanced and topical study.
       </p>
     </div>
   </section>
@@ -23,21 +65,68 @@ const topics = (await getCollection("topics")).sort(byTopicOrder);
   <section class="section">
     <div class="shell" data-filter-scope>
       <ResourceFilter label="Filter topics" />
-      <div class="grid">
-        {
-          topics.map((topic) => (
-            <article
-              class="topic-card"
-              data-filter-card
-              data-search={`${topic.data.title} ${topic.data.summary} Unit ${topic.data.order}`.toLowerCase()}
-            >
-              <span class="badge">Unit {topic.data.order}</span>
-              <h2><a href={withBase(`/topics/${contentSlug(topic)}/`)}>{topic.data.title}</a></h2>
-              <p>{topic.data.summary}</p>
-              <a class="text-link" href={withBase(`/topics/${contentSlug(topic)}/`)}>Open unit</a>
-            </article>
-          ))
-        }
+      <div class="topic-section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Core syllabus</p>
+            <h2>Regular Units</h2>
+          </div>
+          <span class="badge">{topics.length} units</span>
+        </div>
+        <div class="grid">
+          {
+            topics.map((topic) => (
+              <article
+                class="topic-card"
+                data-filter-card
+                data-search={`${topic.data.title} ${topic.data.summary} Unit ${topic.data.order} Regular Units`.toLowerCase()}
+              >
+                <span class="badge">Unit {topic.data.order}</span>
+                <h2><a href={withBase(`/topics/${contentSlug(topic)}/`)}>{topic.data.title}</a></h2>
+                <p>{topic.data.summary}</p>
+                <a class="text-link" href={withBase(`/topics/${contentSlug(topic)}/`)}>Open unit</a>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+      <div class="topic-section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Advanced modules</p>
+            <h2>Special Units</h2>
+          </div>
+          <span class="badge">{specialTopics.length + futureSpecialUnits.length} units</span>
+        </div>
+        <div class="grid">
+          {
+            specialTopics.map((topic) => (
+              <article
+                class="topic-card topic-card--special"
+                data-filter-card
+                data-search={`${topic.data.title} ${topic.data.summary} Special Unit ${topic.data.specialOrder} Special Units`.toLowerCase()}
+              >
+                <span class="badge">Special Unit {topic.data.specialOrder}</span>
+                <h2><a href={withBase(`/topics/${contentSlug(topic)}/`)}>{topic.data.title}</a></h2>
+                <p>{topic.data.summary}</p>
+                <a class="text-link" href={withBase(`/topics/${contentSlug(topic)}/`)}>Open unit</a>
+              </article>
+            ))
+          }
+          {
+            futureSpecialUnits.map((unit, index) => (
+              <article
+                class="topic-card topic-card--special"
+                data-filter-card
+                data-search={`${unit.title} ${unit.summary} Special Unit ${specialTopics.length + index + 1} Special Units`.toLowerCase()}
+              >
+                <span class="badge">Special Unit {specialTopics.length + index + 1}</span>
+                <h2>{unit.title}</h2>
+                <p>{unit.summary}</p>
+              </article>
+            ))
+          }
+        </div>
       </div>
     </div>
   </section>

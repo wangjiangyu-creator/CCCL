@@ -10,7 +10,7 @@ status: "Judicial policy guidance"
 sourceUrl: "https://www.court.gov.cn/zixun/xiangqing/199691.html"
 translationStatus: "unavailable"
 summary: "The Ninth Civil and Commercial Trial Minutes include influential guidance on company personality denial, external guarantees, representative authority, valuation-adjustment mechanisms, nominee shareholding, contribution acceleration, and corporate-governance defects in transactions."
-topics: ["business-forms-and-personality", "formation-registration-and-articles", "capital-contributions-and-shareholder-finance", "corporate-organs-and-governance", "directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection", "veil-piercing-groups-and-creditors"]
+topics: ["business-forms-and-personality", "formation-registration-and-articles", "capital-contributions-and-shareholder-finance", "corporate-organs-and-governance", "directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection", "veil-piercing-groups-and-creditors", "private-equity-china-comparative-law"]
 tags: ["Jiu Min Minutes", "company guarantee", "valuation adjustment mechanism", "nominee shareholding", "legal representative", "good faith"]
 ---
 

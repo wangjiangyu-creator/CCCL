@@ -11,7 +11,7 @@ sourceUrl: "https://gongbao.court.gov.cn/details/ce26ed23e276a4af04509bed31d259.
 originalDecisionUrl: "https://gongbao.court.gov.cn/details/ce26ed23e276a4af04509bed31d259.html"
 translationStatus: "unavailable"
 summary: "A Gazette case involving limited-partnership fund investors, derivative-style enforcement, trust contracts, and listed-company share-return arrangements."
-topics: ["business-forms-and-personality", "shareholder-rights-and-minority-protection", "listed-companies-securities-and-disclosure"]
+topics: ["business-forms-and-personality", "shareholder-rights-and-minority-protection", "listed-companies-securities-and-disclosure", "private-equity-china-comparative-law"]
 tags: ["SPC Gazette", "partnership enterprise", "limited partnership", "derivative action", "private fund", "listed company"]
 ---
 

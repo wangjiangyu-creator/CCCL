@@ -12,6 +12,8 @@ interface Props {
 }
 
 const { topic, legislation, cases, readings, exercises } = Astro.props;
+const topicLabel =
+  topic.data.unitType === "special" ? `Special Unit ${topic.data.specialOrder}` : `Unit ${topic.data.order}`;
 
 type PrepRecord = {
   title: string;
@@ -75,7 +77,7 @@ const steps: PrepStep[] = [
 ];
 
 const reflectionPrompts = [
-  `Which rule or case controls the hardest issue in Unit ${topic.data.order}?`,
+  `Which rule or case controls the hardest issue in ${topicLabel}?`,
   "Where would a Hong Kong, Delaware, UK, Singapore, or transnational comparator change the analysis?",
   "What extra facts would you need before advising a director, shareholder, creditor, or regulator?"
 ];
@@ -87,7 +89,7 @@ const totalMaterials = legislation.length + cases.length + readings.length + exe
   <div class="prep-checklist__head">
     <div>
       <p class="eyebrow">Before seminar</p>
-      <h2 id="prep-heading">Prepare Unit {topic.data.order}: {topic.data.title}</h2>
+      <h2 id="prep-heading">Prepare {topicLabel}: {topic.data.title}</h2>
       <p>
         Work through these public materials before class. The sequence keeps source
         reading before problem analysis and does not include model answers.

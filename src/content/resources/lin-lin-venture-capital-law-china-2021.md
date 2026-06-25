@@ -9,7 +9,7 @@ status: "Scholarly monograph"
 sourceUrl: "https://www.cambridge.org/core/books/venture-capital-law-in-china/23ABC852279E85CD7974835D47B4A7E5"
 translationStatus: "not-needed"
 summary: "Monograph on Chinese venture capital law, including venture-capital contracting, valuation-adjustment mechanisms, investor protection, and exit arrangements."
-topics: ["shareholder-rights-and-minority-protection", "capital-contributions-and-shareholder-finance", "comparative-law"]
+topics: ["shareholder-rights-and-minority-protection", "capital-contributions-and-shareholder-finance", "comparative-law", "private-equity-china-comparative-law"]
 tags: ["venture capital", "valuation adjustment mechanism", "private equity", "investor protection", "comparative law"]
 ---
 

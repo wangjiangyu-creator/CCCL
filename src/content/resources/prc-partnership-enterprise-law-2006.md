@@ -11,7 +11,7 @@ sourceUrl: "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_28f19c7b
 translationUrl: "https://www.npc.gov.cn/zgrdw/englishnpc/Law/2008-01/02/content_1388020.htm"
 translationStatus: "official"
 summary: "The principal statute for general and limited partnerships, useful for contrasting partner liability, partnership property, and governance with company personality and limited shareholder liability."
-topics: ["business-forms-and-personality", "formation-registration-and-articles", "capital-contributions-and-shareholder-finance"]
+topics: ["business-forms-and-personality", "formation-registration-and-articles", "capital-contributions-and-shareholder-finance", "private-equity-china-comparative-law"]
 tags: ["partnership", "business forms", "limited partnership", "unlimited liability"]
 ---
 
@@ -22,4 +22,3 @@ Use this alongside the Company Law when students compare incorporated companies 
 ## Teaching Notes
 
 Partnership law is especially useful for showing that limited liability is a legal design choice, not a natural feature of business organization.
-

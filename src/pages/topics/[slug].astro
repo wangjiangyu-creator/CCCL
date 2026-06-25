@@ -32,12 +32,14 @@ const groups = [
 const topicExercises = topic.data.exerciseIds
   .map((id) => exerciseLookup.get(id))
   .filter((exercise): exercise is (typeof exercises)[number] => Boolean(exercise));
+const topicLabel =
+  topic.data.unitType === "special" ? `Special Unit ${topic.data.specialOrder}` : `Unit ${topic.data.order}`;
 ---
 
 <BaseLayout title={topic.data.title} description={topic.data.summary}>
   <section class="hero">
     <div class="shell">
-      <p class="eyebrow">Unit {topic.data.order}</p>
+      <p class="eyebrow">{topicLabel}</p>
       <h1 class="page-title">{topic.data.title}</h1>
       <p class="lede">{topic.data.summary}</p>
     </div>

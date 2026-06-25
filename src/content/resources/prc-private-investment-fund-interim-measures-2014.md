@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://www.csrc.gov.cn/csrc/c101939/c1045352/content.shtml"
 translationStatus: "unavailable"
 summary: "CSRC rules for private investment fund managers, qualified investors, fundraising, registration and filing, investment operation, information disclosure, and enforcement."
-topics: ["business-forms-and-personality", "capital-contributions-and-shareholder-finance", "listed-companies-securities-and-disclosure"]
+topics: ["business-forms-and-personality", "capital-contributions-and-shareholder-finance", "listed-companies-securities-and-disclosure", "private-equity-china-comparative-law"]
 tags: ["CSRC", "private funds", "limited partnerships", "qualified investors"]
 ---
 

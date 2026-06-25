@@ -101,10 +101,14 @@ const whitespaceRegExp = (value) => value.trim().split(/\s+/).map(escapeRegExp).
 
 test("course topic pages cover the ten LW6134 teaching units", async () => {
   const topics = await readCollection("topics");
-  assert.equal(topics.length, 10, "expected exactly ten topic pages");
+  const regularTopics = topics.filter((topic) => (topic.data.unitType ?? "regular") !== "special");
+  const specialTopics = topics.filter((topic) => topic.data.unitType === "special");
+
+  assert.equal(regularTopics.length, 10, "expected exactly ten regular topic pages");
+  assert.ok(specialTopics.length >= 1, "expected at least one special topic page");
 
   const orders = new Set();
-  for (const topic of topics) {
+  for (const topic of regularTopics) {
     assert.equal(typeof topic.data.title, "string", `${topic.file} needs a title`);
     assert.equal(typeof topic.data.summary, "string", `${topic.file} needs a summary`);
     assert.equal(typeof topic.data.order, "number", `${topic.file} needs a numeric order`);
@@ -121,6 +125,22 @@ test("course topic pages cover the ten LW6134 teaching units", async () => {
   }
 
   assert.deepEqual([...orders].sort((a, b) => a - b), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+  for (const topic of specialTopics) {
+    assert.equal(typeof topic.data.title, "string", `${topic.file} needs a title`);
+    assert.equal(typeof topic.data.summary, "string", `${topic.file} needs a summary`);
+    assert.equal(typeof topic.data.order, "number", `${topic.file} needs a numeric order`);
+    assert.equal(topic.data.unitType, "special", `${topic.file} needs special unitType`);
+    assert.equal(typeof topic.data.specialOrder, "number", `${topic.file} needs numeric specialOrder`);
+
+    for (const key of ["legislationIds", "caseIds", "readingIds", "exerciseIds"]) {
+      assert.ok(Array.isArray(topic.data[key]), `${topic.file} needs ${key}`);
+    }
+
+    for (const section of ["## Introduction", "## Legislation", "## Cases"]) {
+      assert.ok(topic.body.includes(section), `${topic.file} missing ${section}`);
+    }
+  }
 });
 
 test("resource records are source-backed and translation-aware", async () => {

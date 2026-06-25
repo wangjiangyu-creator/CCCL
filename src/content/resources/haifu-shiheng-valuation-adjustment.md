@@ -11,7 +11,7 @@ sourceUrl: "https://gongbao.court.gov.cn/Details/0e07feeb9a41c731e3730b9a4555f4.
 originalDecisionUrl: "https://gongbao.court.gov.cn/Details/0e07feeb9a41c731e3730b9a4555f4.html"
 translationStatus: "unavailable"
 summary: "Landmark valuation-adjustment case distinguishing investor compensation undertakings by target-company shareholders from compensation undertakings by the target company itself."
-topics: ["shareholder-rights-and-minority-protection", "capital-contributions-and-shareholder-finance", "formation-registration-and-articles"]
+topics: ["shareholder-rights-and-minority-protection", "capital-contributions-and-shareholder-finance", "formation-registration-and-articles", "private-equity-china-comparative-law"]
 tags: ["SPC Gazette", "valuation adjustment mechanism", "VAM", "capital maintenance", "shareholder agreement", "private equity"]
 ---
 

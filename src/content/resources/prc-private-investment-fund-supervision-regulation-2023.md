@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://www.gov.cn/zhengce/content/202307/content_6890738.htm"
 translationStatus: "unavailable"
 summary: "State Council regulation for private investment fund managers, fundraising, investment operation, investor protection, venture capital funds, and regulatory enforcement."
-topics: ["business-forms-and-personality", "capital-contributions-and-shareholder-finance", "listed-companies-securities-and-disclosure"]
+topics: ["business-forms-and-personality", "capital-contributions-and-shareholder-finance", "listed-companies-securities-and-disclosure", "private-equity-china-comparative-law"]
 tags: ["private funds", "limited partnerships", "fund managers", "CSRC"]
 ---
 

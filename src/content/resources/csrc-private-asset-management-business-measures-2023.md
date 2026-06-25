@@ -10,7 +10,7 @@ status: "Current"
 sourceUrl: "https://www.csrc.gov.cn/csrc/c101953/c6987995/content.shtml"
 translationStatus: "unavailable"
 summary: "CSRC rules for private asset-management business by securities and futures institutions, including product governance, fiduciary duties, leverage, risk controls, and investor protection."
-topics: ["listed-companies-securities-and-disclosure", "capital-contributions-and-shareholder-finance", "directors-officers-and-controller-duties"]
+topics: ["listed-companies-securities-and-disclosure", "capital-contributions-and-shareholder-finance", "directors-officers-and-controller-duties", "private-equity-china-comparative-law"]
 tags: ["CSRC", "private asset management", "securities institutions", "fiduciary duties"]
 ---
 

@@ -8,6 +8,11 @@ export const contentSlug = (entry: { id: string }) => entry.id.replace(/\.(md|md
 
 export const byTopicOrder = (a: Topic, b: Topic) => a.data.order - b.data.order;
 
+export const isSpecialTopic = (topic: Topic) => topic.data.unitType === "special";
+
+export const bySpecialTopicOrder = (a: Topic, b: Topic) =>
+  (a.data.specialOrder ?? a.data.order) - (b.data.specialOrder ?? b.data.order);
+
 export const byResourceTitle = (a: Resource, b: Resource) =>
   a.data.title.localeCompare(b.data.title);
 

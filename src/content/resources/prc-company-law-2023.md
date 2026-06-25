@@ -11,7 +11,7 @@ sourceUrl: "https://www.npc.gov.cn/c2/c30834/202312/t20231229_433999.html"
 translationUrl: "/materials/company-law-2024-translation.pdf"
 translationStatus: "english-version"
 summary: "The core statute for Chinese companies, covering legal personality, registration, capital, corporate organs, directors' duties, state-invested companies, bonds, accounting, restructuring, dissolution, liquidation, and liability."
-topics: ["business-forms-and-personality", "formation-registration-and-articles", "capital-contributions-and-shareholder-finance", "corporate-organs-and-governance", "directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection", "veil-piercing-groups-and-creditors", "listed-companies-securities-and-disclosure", "state-owned-and-foreign-invested-companies", "distress-dissolution-and-liquidation"]
+topics: ["business-forms-and-personality", "formation-registration-and-articles", "capital-contributions-and-shareholder-finance", "corporate-organs-and-governance", "directors-officers-and-controller-duties", "shareholder-rights-and-minority-protection", "veil-piercing-groups-and-creditors", "listed-companies-securities-and-disclosure", "state-owned-and-foreign-invested-companies", "distress-dissolution-and-liquidation", "private-equity-china-comparative-law"]
 tags: ["company law", "2023 revision", "corporate governance", "capital", "directors"]
 ---
 
